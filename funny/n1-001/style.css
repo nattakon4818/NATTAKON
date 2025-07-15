@@ -141,7 +141,7 @@ h1 > span > span {
     gap: 90px;
 }
 
-.card-1 {
+.card {
     display: block;
     font-weight: bolder;
     width: 430px;
@@ -152,126 +152,16 @@ h1 > span > span {
     text-align: center;
     margin: 0 auto;
 }
-.card-1 a {
+.card a {
     color: black;
 }
-.card-1 img {
+.card img {
     width: 320px;
     height: 350px;
     margin: 0 auto;
     padding: 10px 0 10px 0px;
 }
-.card-1 p {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.card-2 {
-    display: block;
-    font-weight: bolder;
-    width: 430px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-2 img {
-    width: 320px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px 0 10px 0px;
-}
-.card-2 p {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.card-3 {
-    display: block;
-    font-weight: bolder;
-    width: 430px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-3 img {
-    width: 320px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px 0 10px 0px;
-}
-.card-3 p {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.card-4 {
-    display: block;
-    font-weight: bolder;
-    width: 430px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-4 img {
-    width: 320px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px 0 10px 0px;
-}
-.card-4 p {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.card-5 {
-    display: block;
-    font-weight: bolder;
-    width: 430px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-5 img {
-    width: 320px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px 0 10px 0px;
-}
-.card-5 p {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-.card-6 {
-    display: block;
-    font-weight: bolder;
-    width: 430px;
-    height: 500px;
-    border: 2px solid;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-6 img {
-    width: 320px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px 0 10px 0px;
-}
-.card-6 p {
+.card p {
     margin-top: 20px;
     font-size: 16px;
 }
