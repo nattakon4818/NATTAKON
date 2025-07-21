@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitNix</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="header">
+      <div class="header-left">
+        <button id="menuBtn" class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <h1>BITNIX</h1>
+      </div>
+      <div class="header-right">
+        <a href="#">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+      <button id="close-btn" class="close-btn" onclick="toggleSidebar()">✖</button>
+      <h1>BITNIX</h1>
+      <a href="#">หน้าหลัก</a>
+      <a href="#">บริการ</a>
+      <a href="#">เกี่ยวกับ</a>
+      <a href="#">ติดต่อ</a>
+    </div>
+
+    <div class="text"><h2>หน้าแรก</h2></div>
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="main">
+      <div class=""></div>
+      <p>main</p>
+    </div>
+    
+    <div class="footer">
+      <div class="footer-low">
+        <p>footer</p>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>
