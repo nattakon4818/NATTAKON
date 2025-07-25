@@ -162,3 +162,86 @@ div .title-row {
     padding: 10px;
     margin-top: 20px;
 }
+
+
+
+
+
+
+------------------------------------------------
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+ul {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+li a {
+  color: black;
+  text-decoration: none;
+}
+.login {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5px 8px 5px 8px;
+}
+
+.header {
+  background-color: rgb(214, 212, 210);
+}
+
+.header-on {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 80px;
+}
+
+.manu-btu {
+  margin-right: 80px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+}
+
+.home-left {
+  display: block;
+  width: 50%;
+  justify-items: center;
+  align-content: center;
+}
+
+.home-right {
+  display: block;
+  width: 50%;
+}
