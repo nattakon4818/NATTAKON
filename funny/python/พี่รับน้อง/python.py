@@ -88,3 +88,10 @@ elif player1 == 3 and player2 == 3:
     print("drew")
 else:
     print("Error")
+
+
+for i in range(4):
+    print(" " * (4 - i) + "*" * (2 * i + 1))
+
+for i in range(5, 0, -1):
+    print(" " * (5 - i) + "*" * (2 * i - 1))
