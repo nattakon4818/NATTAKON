@@ -15,4 +15,4 @@ if f == b:
     print(f"Your enter number : {number} is Palindrome Number.")
 else:
     print(f"Your enter number : {number} is not Palindrome Number.")
-print("Exit Program")
+print()
