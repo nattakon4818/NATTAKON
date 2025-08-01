@@ -89,9 +89,84 @@ elif player1 == 3 and player2 == 3:
 else:
     print("Error")
 
+########################################################################
 
 for i in range(4):
     print(" " * (4 - i) + "*" * (2 * i + 1))
 
 for i in range(5, 0, -1):
     print(" " * (5 - i) + "*" * (2 * i - 1))
+
+########################################################################
+
+text = str(input("Enter your name : "))
+text = 'ruksomchai'
+
+for i in range(len(text)):
+    space = ' ' * (len(text))
+    a = " ",
+    print(space + a)
+
+num = '123456'
+l = len(num)
+for i in range(l):
+    print(' ' * i, end='')
+
+    for i in range( l-1, -1, -1):
+        print(num[i], end='')
+        
+    for i in range( 1, l):
+        print(num[i], end='')
+        
+    print()
+    l -= 1
+    
+########################################################################
+
+num = int(input("Enter number : "))
+for i in range(12):
+    print(f" {num} x {i + 1} = {num * (i + 1)}")
+    
+########################################################################
+
+while True:
+    num = int(input("Enter number : "))
+    if num <= 0:
+        print("It's underflow. please try again.")
+    elif num >= 1000:
+        print("It's overfloe. please try again.")
+    else:
+        for i in range(12):
+            print(f"{num} x {i + 1} = {num * (i + 1)}")
+        break
+
+########################################################################
+
+while True:
+    print("=" * 49, "\n|\t\tCurrency Convert\t\t|\n", "=" * 49, "\n", "| 0. Ecit\n", "| 1. Enter money\n", "| 2. Convert THB to USD(33 THB / 1 USD)\n", "| 3. Convert THB to USD(0.2 THB / 1 JPY)\n", "| 4. Convert THB to USD(37 THB / 1 EUR)\n", "=" * 49, sep="")
+    c = int(input("\nEnter choice : "))
+    
+    if c == 0:
+        print("exit.")
+        break
+    elif c == 1:
+        m = int(input("Enter money : "))
+        print(f"your money : {m:,.2f} (THB)" )
+    elif c == 2:
+        s = m / 33
+        print(f"{m:,.2f} (THB) => {s:,.2f} (USD)")
+    elif c == 3:
+        s = m / 0.2
+        print(f"{m:,.2f} (THB) => {s:,.2f} (JPY)")
+    elif c == 4:
+        s = m / 37
+        print(f"{m:,.2f} (THB) => {s:,.2f} (EUR)")
+    else:
+        print("No choice please try again.")
+        
+#######################################################################
+
+print("=" * 49, "\n|\t\tCurrency Convert\t\t|\n", "=" * 49, "\n", "| 0. Ecit |:\n", "| 1. Enter money\n", "| 2. Convert THB to USD(33 THB / 1 USD)\n", "| 3. Convert THB to USD(0.2 THB / 1 JPY)\n", "| 4. Convert THB to USD(37 THB / 1 EUR)\n", sep="")
+print(f"{"=" * 49}{"\n|Currency Convert|\n"}{"=" * 49}", sep='')
+
+print(len("|Currency Convert|"))
