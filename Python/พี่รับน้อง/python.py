@@ -143,7 +143,7 @@ while True:
 ########################################################################
 
 while True:
-    print("=" * 49, "\n|\t\tCurrency Convert\t\t|\n", "=" * 49, "\n", "| 0. Ecit\n", "| 1. Enter money\n", "| 2. Convert THB to USD(33 THB / 1 USD)\n", "| 3. Convert THB to USD(0.2 THB / 1 JPY)\n", "| 4. Convert THB to USD(37 THB / 1 EUR)\n", "=" * 49, sep="")
+    print(f"{"=" * 49}",f"{"|\t\tCurrency Convert\t\t|"}",f"{"=" * 49}",f"|{" 0. Exit":<47}|",f"|{" 1. Enter money":<47}|",f"|{" 2. Convert THB to USD(33 THB / 1 USD)":<47}|",f"|{" 3. Convert THB to USD(0.2 THB / 1 JPY)":<47}|",f"|{" 4. Convert THB to USD(37 THB / 1 EUR)":<47}|",f"{"=" * 49}", sep='\n')
     c = int(input("\nEnter choice : "))
     
     if c == 0:
