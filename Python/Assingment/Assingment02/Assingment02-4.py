@@ -1,11 +1,5 @@
 while True:
-    print("=" * 27)
-    print("::       Main Menu       ::")
-    print("=" * 27)
-    print("A. Get Integer Number")
-    print("B. Summation of Digit")
-    print("C. Conut Digit")
-    print("D. Exut")
+    print(f"{"=" * 27}",f"{"::\tMain Menu\t::"}",f"{"=" * 27}",f"{"A. Get Integer Number"}",f"{"B. Summation of Digit"}",f"{"C. Conut Digit"}",f"{"D. Exut"}", sep='\n')
     
     choice = input("Enter Choice : ")
 
@@ -14,36 +8,24 @@ while True:
         print()
     
     elif choice == 'B' or choice == 'b':
-
         even = 0
         odd = 0
         total = 0
-        
-        if num:
-            for i in num:
-                total += int(i)
-            print(f"\nSummation of digits = {total}")
-
 
         for i in num:
+            total += int(i)
             digit = int(i)
             if digit % 2 == 0:
                 even += digit
             else:
                 odd += digit
 
-        print(f"Summation odd of digits : {odd}\nSummation even of digits : {even}")
-        print()
+        print(f"\nYour enter number : {num}\nSummation of digits = {total}\nSummation odd of digits : {odd}\nSummation even of digits : {even}\n")
 
     elif choice == 'C' or choice == 'c':
-
         sum = len(num)
-
-        print(f"\nYour enter number : {num}")
-        print(f"This number has {sum} digits.")
-        print()
+        print(f"\nYour enter number : {num}\nThis number has {sum} digits.\n")
 
     elif choice == 'D' or choice == 'd':
-        print("\nExit program...")
-        print()
+        print("\nExit program...\n")
         break

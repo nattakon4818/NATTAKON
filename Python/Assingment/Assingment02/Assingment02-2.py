@@ -1,7 +1,5 @@
 print(">> Program Change Number to Text <<")
-
 number = input("Enter an integer number : ")
-
 print("Text : ", end="")
 
 for i in number:
