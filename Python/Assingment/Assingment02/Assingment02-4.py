@@ -15,29 +15,31 @@ while True:
     
     elif choice == 'B' or choice == 'b':
 
+        even = 0
+        odd = 0
+        total = 0
+        
         if num:
-            total = 0
-            for ch in num:
-                total += int(ch)
+            for i in num:
+                total += int(i)
             print(f"\nSummation of digits = {total}")
 
-        even_sum = 0
-        odd_sum = 0
 
-        for ch in num:
-            digit = int(ch)
+        for i in num:
+            digit = int(i)
             if digit % 2 == 0:
-                even_sum += digit
+                even += digit
             else:
-                odd_sum += digit
+                odd += digit
 
-        print("Summation odd of digits :", odd_sum)
-        print("Summation even of digits :", even_sum)
+        print(f"Summation odd of digits : {odd}\nSummation even of digits : {even}")
         print()
 
     elif choice == 'C' or choice == 'c':
-        print(f"\nYour enter number : {num}")
+
         sum = len(num)
+
+        print(f"\nYour enter number : {num}")
         print(f"This number has {sum} digits.")
         print()
 

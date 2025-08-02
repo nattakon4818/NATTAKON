@@ -1,3 +1,5 @@
+print(">> Program Change Number to Text <<")
+
 while True:
     money = float(input("Enter your income( -1 to exit) : "))
 
