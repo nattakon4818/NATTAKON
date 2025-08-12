@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background: #f2f2f2;
+    background: linear-gradient(#aa4b6b, #3b8d99);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,14 +8,14 @@ body {
 }
 
 .form-container {
-    background: white;
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     width: 350px;
 }
 
-.form-container h2 {
+.form-container h1 {
     text-align: center;
 }
 
@@ -28,13 +28,14 @@ body {
 }
 
 input {
-    width: 100%;
+    width: 94%;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 10px;
     width: 100%;
     background-color: #007bff;
@@ -43,11 +44,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
-.toggle-link {
+.toggle {
+    display: flex;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
+    justify-content: center;
+}
+.toggle-link {
+    margin-left: 5px;
     cursor: pointer;
     color: #007bff;
 }

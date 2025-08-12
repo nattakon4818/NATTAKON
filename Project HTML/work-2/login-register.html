@@ -10,19 +10,25 @@
     
     <div class="form-container">
         <div id="loginForm" class="form active">
-            <h2>เข้าสู่ระบบ</h2>
+            <h1>เข้าสู่ระบบ</h1>
             <input type="text" placeholder="ชื่อผู้ใช้" required>
             <input type="password" placeholder="รหัสผ่าน" required>
             <button>เข้าสู่ระบบ</button>
-            <div class="toggle-link" onclick="showRegister()">ยังไม่มีบัญชี? สมัครสมาชิก</div>
+            <div class="toggle">
+                <div>ยังไม่มีบัญชี?</div>
+                <div class="toggle-link" onclick="showRegister()">สมัครสมาชิก</div>
+            </div>
         </div>
         <div id="registerForm" class="form">
-            <h2>สมัครสมาชิก</h2>
+            <h1>สมัครสมาชิก</h1>
             <input type="text" placeholder="ชื่อผู้ใช้" required>
             <input type="email" placeholder="อีเมล" required>
             <input type="password" placeholder="รหัสผ่าน" required>
             <button>สมัครสมาชิก</button>
-            <div class="toggle-link" onclick="showLogin()">มีบัญชีอยู่แล้ว? เข้าสู่ระบบ</div>
+            <div class="toggle">
+                <div class="toggle-title">มีบัญชีอยู่แล้ว?</div>
+                <div class="toggle-link" onclick="showLogin()">เข้าสู่ระบบ</div>
+            </div>
         </div>
     </div>
 
