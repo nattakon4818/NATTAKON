@@ -1,8 +1,33 @@
-# while True:
-#     print(f"{"=" * 17}",f"{"| Tax Main Menu |"}")
+import random
 
+while True:
+    print(f"\nMain Menu\n{("=") * 12}\n1. Play game\n2. Exit")
 
-# print(f"{"=" * 49}",f"{"|\t\tCurrency Convert\t\t|"}",f"{"=" * 49}",f"|{" 0. Exit":<47}|",f"|{" 1. Enter money":<47}|",f"|{" 2. Convert THB to USD(33 THB / 1 USD)":<47}|",f"|{" 3. Convert THB to USD(0.2 THB / 1 JPY)":<47}|",f"|{" 4. Convert THB to USD(37 THB / 1 EUR)":<47}|",f"{"=" * 49}", sep='\n')
-print(f"{"=" * 17}",f"{"| Tax Main Menu |"}",f"{"=" * 17}",f"{" 0. Exit"}",f"{" 1. Input Salaey(0.00)"}",f"{" 2. Display Tax"}", sep='\n')
+    choice = input("Enter choice : ")
 
-choice = int(input("Enter choice : "))
+    if choice == "1":
+        random_number = random.randint(1, 99)
+        limit = 6
+
+        print("\nNow Play game")
+
+        for round in range(1, limit + 1):
+            guess = int(input(f"Enter guess number(#{round}) : "))
+
+            if guess == random_number:
+                print(f"You win, use guess {limit} times.\nNumber guess is {random_number}.")
+                break
+            elif guess > random_number:
+                print("Your value is more than")
+            else:
+                print("Youe value is less than")
+
+        else:
+            print(f"\nYou lose, random number is {random_number}.")
+
+    elif choice == "2":
+        print("Exit Program...\n")
+        print("Press any key to continue ...")
+        break
+    else:
+        print("No choice, enter again.")
