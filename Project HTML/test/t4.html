@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Menu</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+        font-family: sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+        background-color: #333;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        }
+
+        .navbar h1 {
+        font-size: 20px;
+        }
+
+        .menu-btn {
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        display: none; /* ซ่อนใน desktop */
+        }
+
+        .menu-desktop {
+        display: none; /* ซ่อนใน mobile */
+        }
+
+        .menu-desktop a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+        }
+
+        .menu-desktop a:hover {
+        text-decoration: underline;
+        }
+
+        /* Overlay Menu สำหรับ mobile */
+        .overlay {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.95);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 999;
+        }
+
+        .overlay.open {
+        max-height: 500px;
+        }
+
+        .menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 15px;
+        }
+
+        .menu-content a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color 0.3s;
+        }
+
+        .menu-content a:hover {
+        color: #ddd;
+        }
+
+        .close-btn {
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+        }
+
+        /* เนื้อหาหลัก */
+        .content {
+        padding: 30px;
+        }
+
+        /* ----------- Responsive ----------- */
+
+        @media (min-width: 768px) {
+        .menu-btn {
+            display: none; /* ไม่ต้องแสดงสามขีดใน PC */
+        }
+
+        .overlay {
+            display: none; /* ไม่ใช้ overlay ใน PC */
+        }
+
+        .menu-desktop {
+            display: block; /* แสดงเมนูแบบปกติใน PC */
+        }
+        }
+
+        @media (max-width: 767px) {
+        .menu-btn {
+            display: block; /* แสดงปุ่มสามขีด */
+        }
+
+        .menu-desktop {
+            display: none; /* ซ่อนเมนูปกติในมือถือ */
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <button class="menu-btn" onclick="openMenu()">☰</button>
+        <h1>MySite</h1>
+
+        <!-- เมนูปกติสำหรับ PC -->
+        <div class="menu-desktop">
+        <a onclick="loadContent('home')">หน้าแรก</a>
+        <a onclick="loadContent('about')">เกี่ยวกับ</a>
+        <a onclick="loadContent('services')">บริการ</a>
+        <a onclick="loadContent('contact')">ติดต่อ</a>
+        <a onclick="loadContent('faq')">FAQ</a>
+        </div>
+    </div>
+
+    <!-- Overlay menu สำหรับมือถือ -->
+    <div class="overlay" id="menuOverlay" onclick="closeMenuOutside(event)">
+        <div class="menu-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeMenu()">✖</button>
+        <a onclick="loadContent('home')">หน้าแรก</a>
+        <a onclick="loadContent('about')">เกี่ยวกับ</a>
+        <a onclick="loadContent('services')">บริการ</a>
+        <a onclick="loadContent('contact')">ติดต่อ</a>
+        <a onclick="loadContent('faq')">FAQ</a>
+        </div>
+    </div>
+
+    <!-- พื้นที่เนื้อหา -->
+    <div class="content" id="mainContent">
+        <h2>ยินดีต้อนรับ</h2>
+        <p>นี่คือหน้าแรกของเว็บไซต์คุณ</p>
+    </div>
+
+  <!-- JavaScript -->
+  <script>
+    const menuOverlay = document.getElementById("menuOverlay");
+    const mainContent = document.getElementById("mainContent");
+
+    function openMenu() {
+      menuOverlay.classList.add("open");
+    }
+
+    function closeMenu() {
+      menuOverlay.classList.remove("open");
+    }
+
+    function closeMenuOutside(event) {
+      if (event.target === menuOverlay) {
+        closeMenu();
+      }
+    }
+
+    function loadContent(page) {
+      let content = "";
+
+      switch (page) {
+        case "home":
+          content = "<h2>หน้าแรก</h2><p>ยินดีต้อนรับสู่เว็บไซต์ของเรา!</p>";
+          break;
+        case "about":
+          content = "<h2>เกี่ยวกับเรา</h2><p>เราเป็นทีมพัฒนาที่มุ่งมั่นในการสร้างเว็บที่ดี</p>";
+          break;
+        case "services":
+          content = "<h2>บริการ</h2><ul><li>ออกแบบเว็บไซต์</li><li>พัฒนาแอปพลิเคชัน</li><li>การตลาดออนไลน์</li></ul>";
+          break;
+        case "contact":
+          content = "<h2>ติดต่อเรา</h2><p>อีเมล: example@email.com<br>โทร: 012-345-6789</p>";
+          break;
+        case "faq":
+          content = "<h2>คำถามที่พบบ่อย</h2><p>รวมคำถามที่ลูกค้าถามบ่อยและคำตอบที่มีประโยชน์</p>";
+          break;
+        default:
+          content = "<h2>ไม่พบหน้า</h2>";
+      }
+
+      mainContent.innerHTML = content;
+      closeMenu(); // ปิดเมนูหลังจากกดเลือก
+    }
+  </script>
+
+</body>
+</html>

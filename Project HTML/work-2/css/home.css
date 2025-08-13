@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    left: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: wheat;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.menu-btn {
+    display: flex;
+    gap: 35px;
+    font-size: 18px;
+    align-items: center;
+    margin-right: 100px;
+
+    & .icon2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        text-align: center;
+    }
+} */
+
+/* nav ul li {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+} */
+
+/* ลูกศร */
+/* .arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 15px;
+  transition: transform 0.3s ease;
+} */
+
+/* ซ่อนเมนูย่อย */
+/* nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 160%;
+  left: 0;
+  background: #444;
+  padding: 0;
+  list-style: none;
+  min-width: 150px;
+  z-index: 100;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  color: white;
+  display: block;
+}
+
+nav ul li ul li a:hover {
+  background: #555;
+} */
+
+/* แสดงเมนูย่อยเมื่อ active */
+/* nav ul li.active ul {
+  display: block;
+} */
+
+/* หมุนลูกศรขึ้นเมื่อ active */
+/* nav ul li.active .arrow {
+  transform: rotate(180deg);
+}
+
+.login a {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+} */
+
+.home {
+    height: 80vh;
+    background-color: antiquewhite;
+    justify-items: center;
+    align-content: center;
+}
+
+.content {
+    height: 200vh;
+    background-color: beige;
+    justify-items: center;
+    align-content: center;
+}
+
+.footer {
+    height: 40vh;
+    background-color: #555;
+    justify-items: center;
+    align-content: center;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: wheat;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  list-style: none;
+}
+
+.menu-btn li {
+  position: relative;
+}
+
+.menu-btn li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu-btn li ul {
+  display: none;
+  position: absolute;
+  top: 160%;
+  left: 0;
+  background: #444;
+  padding: 0;
+  min-width: 150px;
+  list-style: none;
+  z-index: 100;
+}
+
+.menu-btn li ul li a {
+  padding: 10px;
+  color: white;
+  display: block;
+}
+
+.menu-btn li ul li a:hover {
+  background: #555;
+}
+
+.menu-btn li.active ul {
+  display: block;
+}
+
+.menu-btn li.active .arrow {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* ปุ่ม Login */
+.login a {
+  padding: 10px 15px;
+  border-radius: 0.6rem;
+  background-color: grey;
+  color: white;
+  font-size: 15px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ปุ่มปิด */
+.close-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu-btn {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: wheat;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 998;
+  }
+
+  .menu-btn.show {
+    display: flex;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .menu-btn li ul {
+    position: relative;
+    top: 10px;
+    background: #555;
+  }
+
+  .menu-btn li ul li a {
+    color: white;
+  }
+}

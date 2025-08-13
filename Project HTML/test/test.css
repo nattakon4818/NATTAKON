@@ -1,0 +1,102 @@
+/* พื้นฐาน navbar */
+.navbar {
+  background: cyan;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar .logo {
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 12px;
+  color: black;
+}
+
+/* ลูกศร dropdown */
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.has-dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* เมนูย่อย */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  list-style: none;
+  padding: 0;
+  min-width: 150px;
+}
+
+.dropdown li a {
+  color: white;
+  display: block;
+  padding: 10px;
+}
+
+.dropdown li a:hover {
+  background: #555;
+}
+
+.has-dropdown.active .dropdown {
+  display: block;
+}
+
+/* ไอคอนตรงกลาง */
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ปุ่มสามขีด */
+.menu-toggle {
+  display: none;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: cyan;
+  }
+  .nav-links li {
+    text-align: center;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
