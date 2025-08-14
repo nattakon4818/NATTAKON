@@ -3,201 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Super Car No.1</title>
     <link rel="stylesheet" href="../css/home.css">
-
-    <!-- <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            left: 0;
-            padding: 0;
-        }
-
-        body {
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        }
-
-        nav {
-            display: flex;
-            position: sticky;
-            top: 0;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            background-color: wheat;
-        }
-
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 100px;
-            /* background-color: aqua; */
-        }
-
-        .menu-btn {
-            display: flex;
-            gap: 35px;
-            font-size: 18px;
-            align-items: center;
-            margin-right: 100px;
-            
-            /* background-color: aqua; */
-
-            & .icon2 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-                text-align: center;
-                /* background-color: red; */
-            }
-        }
-
-        nav ul li {
-            position: relative;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        nav ul li a {
-            display: flex;
-            align-items: center;
-            color: black;
-            text-decoration: none;
-        }
-
-        /* ลูกศร */
-        .arrow {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 5px;
-            font-size: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        /* ซ่อนเมนูย่อย */
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 160%; /* ให้อยู่ใต้ปุ่มพอดี */
-            left: 0;
-            background: #444;
-            padding: 0;
-            list-style: none;
-            min-width: 150px;
-            z-index: 100;
-        }
-
-        nav ul li ul li a {
-            padding: 10px;
-            color: white;
-            display: block;
-        }
-
-        nav ul li ul li a:hover {
-            background: #555;
-        }
-
-        /* แสดงเมนูย่อยเมื่อ active */
-        nav ul li.active ul {
-            display: block;
-        }
-
-        /* หมุนลูกศรขึ้นเมื่อ active */
-        nav ul li.active .arrow {
-            transform: rotate(180deg);
-        }
-
-        .login a {
-            padding: 15px;
-            border-radius: 10px;
-            background-color: black;
-            color: white;
-            font-size: 15px;
-        }
-
-        .home {
-            height: 80vh;
-            background-color: antiquewhite;
-        }
-
-        .content {
-            height: 200vh;
-            background-color: beige;
-        }
-
-        .footer {
-            height: 40vh;
-            background-color: #555;
-        }
-    </style> -->
 </head>
 <body>
+    
+    <!-- ✅ เมนูและ overlay ควรอยู่ **นอก nav** -->
+    <div id="overlay"></div>
 
-    <!-- <nav>
-        <div class="logo">
-            <img src="" alt="">
-            <h2>Logo</h2>
-        </div>
-        <div class="menu">
-            <ul class="menu-btn">
-                <li>Home</li>
-                <li>Abount</li>
-                <li id="menu-1">
-                    <a href="javascript:void(0)">Service<ion-icon class="arrow" name="caret-down-outline"></ion-icon></a>
-                    <ul>
-                        <li><a href="#">ออกแบบเว็บ</a></li>
-                        <li><a href="#">พัฒนาเว็บ</a></li>
-                        <li><a href="#">การตลาดออนไลน์</a></li>
-                    </ul>
-                </li>
-                <li class="login"><a href="../html/login-register.html">Login</a></li>
-                <li class="icon2"><ion-icon name="person-circle-outline"></ion-icon></li>
-            </ul>
-        </div>
-    </nav> -->
+    <div id="menu">
+        <a href="#">หน้าแรก</a>
+        <a href="#">เกี่ยวกับ</a>
+        <a href="#">ติดต่อ</a>
+    </div>
 
     <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <h2>Logo</h2>
-            </div>
-            <!-- ปุ่มสามขีดสำหรับมือถือ -->
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div id="menuToggle" class="sidebar">
+            <ion-icon name="menu-outline"></ion-icon>
+            <p>MENU</p>
+        </div>
 
-            <!-- เมนู -->
-            <ul class="menu-btn" id="navMenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li id="menu-1">
-                    <a href="javascript:void(0)">Service <ion-icon class="arrow" name="caret-down-outline"></ion-icon></a>
-                    <ul>
-                        <li><a href="#">ออกแบบเว็บ</a></li>
-                        <li><a href="#">พัฒนาเว็บ</a></li>
-                        <li><a href="#">การตลาดออนไลน์</a></li>
-                    </ul>
-                </li>
-                <li class="login"><a href="../html/login-register.html">Login</a></li>
-                <li class="icon2"><ion-icon name="person-circle-outline"></ion-icon></li>
-                <!-- <li class="close-btn" onclick="toggleMenu()">✖</li> -->
-            </ul>
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+        
+        <div class="search">
+            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
         </div>
     </nav>
+
 
     <div class="home">
         <h1>Home</h1>
     </div>
     <div class="content">
-        <h1>content</h1>
+        <h1>Content</h1>
     </div>
     <div class="footer">
-        <h1>footer</h1>
+        <h1>Footer</h1>
     </div>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

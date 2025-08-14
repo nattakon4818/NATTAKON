@@ -1,4 +1,12 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Car No.1</title>
+    <!-- <link rel="stylesheet" href="../css/home.css"> -->
+    <style>
+        * {
     box-sizing: border-box;
     margin: 0;
     left: 0;
@@ -84,7 +92,7 @@ nav {
 
 /* เมนูแสดง */
 #menu.show {
-  top: auto;
+  top: 100px; /* ให้เมนูโผล่มาใต้ nav */
 }
 
 #overlay.show {
@@ -94,9 +102,8 @@ nav {
 /* --------------------------------------------------- */
 
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: center;
+    
 }
 
 .search a {
@@ -127,3 +134,67 @@ nav {
     color: white;
     background-color: black;
 }
+
+    </style>
+</head>
+<body>
+
+    <body>
+
+  <!-- ✅ เมนูและ overlay ควรอยู่ **นอก nav** -->
+  <div id="overlay"></div>
+
+  <div id="menu">
+      <a href="#">หน้าแรก</a>
+      <a href="#">เกี่ยวกับ</a>
+      <a href="#">ติดต่อ</a>
+  </div>
+
+  <nav>
+      <div id="menuToggle" class="sidebar">
+          <ion-icon name="menu-outline"></ion-icon>
+          <p>MENU</p>
+      </div>
+
+      <div class="logo">
+          <h1>Logo</h1>
+      </div>
+      
+      <div class="search">
+          <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+      </div>
+  </nav>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function showLogin() {
+    document.getElementById("loginForm").classList.add("active");
+    document.getElementById("registerForm").classList.remove("active");
+}
+
+function showRegister() {
+    document.getElementById("registerForm").classList.add("active");
+    document.getElementById("loginForm").classList.remove("active");
+}
+
+const toggleBtn = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('overlay');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    overlay.classList.toggle('show');
+});
+
+// ปิดเมนูเมื่อคลิกพื้นที่ว่าง
+overlay.addEventListener('click', () => {
+    menu.classList.remove('show');
+    overlay.classList.remove('show');
+});
+    </script>
+    
+</body>
+</html>
