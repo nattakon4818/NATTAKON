@@ -1,103 +1,117 @@
-salary = 0.00
-while True:
-    print(f"{"=" * 17}",f"{"| Tax Main Menu |"}",f"{"=" * 17}",f"{" 0. Exit"}",f"{" 1. Input Salaey"}({salary:,.2f})",f"{" 2. Display Tax"}", sep='\n')
-    
-    choice = int(input("Enter Choice : "))
+head = "| Tax Main Menu |"
+line = "=" * len(head)
+h = "|         Net     Income      |Tax Rate|                 Tax                  |"
+l = "=" * len(h)
+salary = 0
 
-    if choice == 0:
-        print("\nExit program...\n")
+while True:
+    print(line, head, line, f"{" 0. Exit"}", f"{" 1. Input Salaey"}({salary:,.2f})", f"{" 2. Display Tax"}", sep='\n')
+
+    choice = input("Enter choice : ")
+
+    if choice == '0':
+        print("\nExit Program ...")
         break
-    
-    elif choice == 1:
-        salary = int(input("Enter salary : "))
+
+    elif choice == '1':
+        salary = float(input("Enter salary : "))
         print()
-    
-    elif choice == 2:
+
+    elif choice == '2':
         income = salary * 12
         discount = 100000
         net_income = income - discount
-        net1 = 150000;net2 = 300000;net3 = 500000;net4= 750000;net5 = 1000000;net6 = 2000000;net7 = 5000000
+        tax = 0.0
 
-        print(f"Salary : {salary:,.2f}\nIncome : {salary * 12:,.2f}\nDiscount : 100,000.00\nNet Income : {net_income:,.2f}")
+        print(f"\nSalary : {salary:,.2f}\nIncome : {salary * 12:,.2f}\nDiscount : 100,000.00\nNet Income : {net_income:,.2f}", "\nReport Tax:", l, h, l, sep='\n')
 
-        if net_income <= 150000:
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 0:
+            lower = 0
+            upper = min(net_income, 150000)
+            rate = 0.00
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 150001:
-            tax = net_income - net1
-            t = tax * 0.05
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 150000:
+            lower = 150000
+            upper = min(net_income, 300000)
+            rate = 0.05
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 300001:
-            tax = net_income - net2
-            t = tax * 0.10
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 300000:
+            lower = 300000
+            upper = min(net_income, 500000)
+            rate = 0.10
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 500001:
-            tax = net_income - net3
-            t = tax * 0.15
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"|{'500,001.00':>14}{'-':^3}{'750,000.00':<14}|{'15%':^8}|{'250,000.00 * 0.15':^22}|{'37,500.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 500000:
+            lower = 500000
+            upper = min(net_income, 750000)
+            rate = 0.15
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 750001:
-            tax = net_income - net4
-            t = tax * 0.20
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"|{'500,001.00':>14}{'-':^3}{'750,000.00':<14}|{'15%':^8}|{'250,000.00 * 0.15':^22}|{'37,500.00 ':>13}|")
-            print(f"|{'750,001.00':>14}{'-':^3}{'1,000,000.00':<14}|{'20%':^8}|{'250,000.00 * 0.20':^22}|{'50,000.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 750000:
+            lower = 750000
+            upper = min(net_income, 1000000)
+            rate = 0.20
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 1000001:
-            tax = net_income - net5
-            t = tax * 0.25
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"|{'500,001.00':>14}{'-':^3}{'750,000.00':<14}|{'15%':^8}|{'250,000.00 * 0.15':^22}|{'37,500.00 ':>13}|")
-            print(f"|{'750,001.00':>14}{'-':^3}{'1,000,000.00':<14}|{'20%':^8}|{'250,000.00 * 0.20':^22}|{'50,000.00 ':>13}|")
-            print(f"|{'1,000,001.00':>14}{'-':^3}{'2,000,000.00':<14}|{'25%':^8}|{'1,000,000.00 * 0.25':^22}|{'250,000.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 1000000:
+            lower = 1000000
+            upper = min(net_income, 2000000)
+            rate = 0.25
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 2000001:
-            tax = net_income - net6
-            t = tax * 0.30
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"|{'500,001.00':>14}{'-':^3}{'750,000.00':<14}|{'15%':^8}|{'250,000.00 * 0.15':^22}|{'37,500.00 ':>13}|")
-            print(f"|{'750,001.00':>14}{'-':^3}{'1,000,000.00':<14}|{'20%':^8}|{'250,000.00 * 0.20':^22}|{'50,000.00 ':>13}|")
-            print(f"|{'1,000,001.00':>14}{'-':^3}{'2,000,000.00':<14}|{'25%':^8}|{'1,000,000.00 * 0.25':^22}|{'250,000.00 ':>13}|")
-            print(f"|{'2,000,001.00':>14}{'-':^3}{'5,000,000.00':<14}|{'30%':^8}|{'3,000,000.00 * 0.30':^22}|{'900,000.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 2000000:
+            lower = 2000000
+            upper = min(net_income, 5000000)
+            rate = 0.30
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{lower + 1:>12,.2f}{'-':^3}{upper:>12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
 
-        elif net_income >= 5000001:
-            tax = net_income - net7
-            t = tax * 0.35
-            print(f"Report Tax : ",f"{"=" * 79}",f"|{'Net Income':^31}|{'Tax Rate':^8}|{'Tax':^36}|",f"{"=" * 79}", sep='\n')
-            print(f"|{'1.00':>14}{'-':^3}{'150,000.00':<14}|{'0%':^8}|{'150,000.00 * 0.00':^22}|{'0.00 ':>13}|")
-            print(f"|{'150,001.00':>14}{'-':^3}{'300,000.00':<14}|{'5%':^8}|{'150,000.00 * 0.05':^22}|{'7,500.00 ':>13}|")
-            print(f"|{'300,001.00':>14}{'-':^3}{'500,000.00':<14}|{'10%':^8}|{'200,000.00 * 0.10':^22}|{'20,000.00 ':>13}|")
-            print(f"|{'500,001.00':>14}{'-':^3}{'750,000.00':<14}|{'15%':^8}|{'250,000.00 * 0.15':^22}|{'37,500.00 ':>13}|")
-            print(f"|{'750,001.00':>14}{'-':^3}{'1,000,000.00':<14}|{'20%':^8}|{'250,000.00 * 0.20':^22}|{'50,000.00 ':>13}|")
-            print(f"|{'1,000,001.00':>14}{'-':^3}{'2,000,000.00':<14}|{'25%':^8}|{'1,000,000.00 * 0.25':^22}|{'250,000.00 ':>13}|")
-            print(f"|{'2,000,001.00':>14}{'-':^3}{'5,000,000.00':<14}|{'30%':^8}|{'3,000,000.00 * 0.30':^22}|{'900,000.00 ':>13}|")
-            print(f"|{'':>14}{'>':^3}{'5,000,000.00':<14}|{'35%':^8}|{'0.00 * 0.35':^22}|{'0.00 ':>13}|")
-            print(f"{'=' * 79}",f"|{'Total Tax':^63}|{'kuy ':>13}|",f"{'=' * 79}", sep='\n')
+        if net_income > 5000000:
+            lower = 5000000
+            upper = net_income
+            rate = 0.35
+            taxable = upper - lower
+            tax_amount = taxable * rate
+            tax += tax_amount
+            range_str = f"{'':>12}{'>':^3}{lower:<12,.2f}"
+            calc_str = f"{taxable:,.2f} * {rate:.2f}"
+            print(f"| {range_str} | {rate*100:>4.0f}%  | {calc_str:<20} | {tax_amount:>13,.2f} |")
+
+        print(l, f"|{'Total Tax':^61}|{tax:>14,.2f} |", l, sep='\n')
+        print()
