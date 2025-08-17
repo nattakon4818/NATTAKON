@@ -45,11 +45,18 @@ button {
     margin-top: 20px;
     padding: 10px;
     width: 100%;
-    background-color: #007bff;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    background: rgba(231, 231, 231, 0.116);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgb(0, 0, 0, 0.3);
+}
+a {
+    color: white;
+    text-decoration: none;
 }
 .toggle {
     display: flex;

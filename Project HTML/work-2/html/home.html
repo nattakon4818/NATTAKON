@@ -8,16 +8,13 @@
 </head>
 <body>
 
-    <!-- ✅ เมนูและ overlay ควรอยู่ **นอก nav** -->
     <div id="overlay"></div>
-    <label for="checkbox"></label>
-    
 
     <div id="menu">
-        <a href="#">Home</a>
-        <a href="abount.html">Abount</a>
-        <a href="#">Service</a>
-        <a href="#">Brand ▼</a>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('abount')">Abount</a>
+        <a href="#" onclick="showPage('brand')">Brand ▼</a>
+        <a href="#" onclick="showPage('service')">Service</a>
     </div>
 
     <nav>
@@ -38,29 +35,70 @@
         </div>
     </nav>
 
+    <div class="page active" id="home">
+        <div class="home" id="fade-in">
+            <div class="left">
+                <div class="head">
+                    <h1>Home</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+            <div class="rigth">
+                <h1>IMG</h1>
+                <div class="img">
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+        </div>
 
-    <div class="home" id="fade-in">
-        <div class="left">
-            <div class="head">
-                <h1>Home</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-            </div>
+        <div class="content1" id="fade-in">
+            <h1>Content1</h1>
         </div>
-        <div class="rigth">
-            <h1>IMG</h1>
-            <div class="img">
-                <!-- <img src="" alt=""> -->
-            </div>
+        <div class="content2" id="fade-in">
+            <h1>Content2</h1>
+        </div>
+        <div class="footer" id="fade-in">
+            <h1>Footer</h1>
         </div>
     </div>
-    <div class="content1" id="fade-in">
-        <h1>Content1</h1>
+
+
+
+    <div class="page" id="abount">
+        <div class="text" id="fade-in">
+            <h1>Abount</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error neque aliquam rerum laborum quia.</p>
+        </div>
+    
+        <div class="image-container" id="fade-in">
+            <div class="image-box">
+                <img src="../img/nine.jpg" alt="Image 1">
+                <div class="overlay-text">
+                    <p>นายณัฐกรณ์ หนูวรรณ</p>
+                    <p>6806021612428</p>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="../img/aut.jpg" alt="Image 2">
+                <div class="overlay-text">
+                    <p>นายณัฐกรณ์ หนูวรรณ</p>
+                    <p>6806021612428</p>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="../img/aum.jpg" alt="Image 3">
+                <div class="overlay-text">
+                    <p>นายณัฐกรณ์ หนูวรรณ</p>
+                    <p>6806021612428</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="content2" id="fade-in">
-        <h1>Content2</h1>
-    </div>
-    <div class="footer">
-        <h1>Footer</h1>
+
+    <div class="page" id="brand">
+        <div class="brand-box">
+            <h1>Kuy</h1>
+        </div>
     </div>
 
 
