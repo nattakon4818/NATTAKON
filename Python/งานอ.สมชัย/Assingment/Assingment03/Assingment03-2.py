@@ -30,4 +30,12 @@ points = gp * credit
 s_points = sum(points)
 gpa = points / credit
 
-print(f"\n{"Grade Report":^65}",f"{"=" * 67}",f":{"Sub No.":^7}:{" Subject Name":<27}:{"Mark":^6}:{"Grade":^7}:{"Credite":^7}:{"Points":^6}:",f"{"=" * 67}",f":{"1":^7}: {sub1:<26}:{score1:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f":{"2":^7}: {sub2:<26}:{score2:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f":{"3":^7}: {sub3:<26}:{score3:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f":{"4":^7}: {sub4:<26}:{score4:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f":{"5":^7}: {sub5:<26}:{score5:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f":{"6":^7}: {sub6:<26}:{score6:^6}:{grade:^7}:{credit:^7}:{points:^6}:",f"{"=" * 67}",f":{"Total":^50}:{"18":^7}:{s_points:^6}:",f"{"=" * 67}",f": {"Grade Point Average(GPA) : ":<26}{gpa:<37}:",f"{"=" * 67}", sep='\n')
+print(f"\n{"Grade Report":^65}",f"{"=" * 67}",f":{"Sub No.":^7}:{" Subject Name":<27}:{"Mark":^6}:{"Grade":^7}:{"Credite":^7}:{"Points":^6}:",f"{"=" * 67}",
+      f":{"1":^7}: {sub1:<26}:{score1:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f":{"2":^7}: {sub2:<26}:{score2:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f":{"3":^7}: {sub3:<26}:{score3:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f":{"4":^7}: {sub4:<26}:{score4:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f":{"5":^7}: {sub5:<26}:{score5:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f":{"6":^7}: {sub6:<26}:{score6:^6}:{grade:^7}:{credit:^7}:{points:^6}:",
+      f"{"=" * 67}",f":{"Total":^50}:{"18":^7}:{s_points:^6}:",
+      f"{"=" * 67}",f": {"Grade Point Average(GPA) : ":<26}{gpa:<37}:",f"{"=" * 67}", sep='\n')
