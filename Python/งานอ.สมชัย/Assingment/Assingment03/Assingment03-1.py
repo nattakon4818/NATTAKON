@@ -26,8 +26,7 @@ while True:
             print(f"\nYou lose, random number is {random_number}.")
 
     elif choice == "2":
-        print("Exit Program...\n")
-        print("Press any key to continue ...")
+        print("Exit Program...\n\nPress any key to continue ...")
         break
     else:
         print("No choice, enter again.")
