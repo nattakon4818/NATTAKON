@@ -15,7 +15,7 @@ while True:
             guess = int(input(f"Enter guess number(#{round}) : "))
 
             if guess == random_number:
-                print(f"You win, use guess {limit} times.\nNumber guess is {random_number}.")
+                print(f"\nYou win, use guess {limit} times.\nNumber guess is {random_number}.")
                 break
             elif guess > random_number:
                 print("Your value is more than")

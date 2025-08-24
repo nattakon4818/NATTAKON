@@ -73,3 +73,36 @@
 
 # for i in range(half - 1, -1, -1):
 #     print(" " * i + name[i:n - i])
+
+print(f"\n>>  Program Calculate Grade <<\n{'=' * 30}\n\nInput Data:")
+
+credit = 3
+s_points = 0
+total_credit = credit * 6
+
+for i in range(1, 7):
+    subject = input(f"Enter subject name({i}) : ")
+    score = float(input(f"Enter subject score({i}) : "))
+
+    if 80 <= score <= 100:
+        grade, gp = "A", 4.0
+    elif 70 <= score <= 79:
+        grade, gp = "B", 3.0
+    elif 60 <= score <= 69:
+        grade, gp = "C", 2.0
+    elif 50 <= score <= 59:
+        grade, gp = "D", 1.0
+    else:
+        grade, gp = "F", 0.0
+
+    points = gp * credit
+    s_points += points
+
+print(f":{i:^7}: {subject:<27}:{score:^6}:{grade:^7}:{credit:^6}:{points:>5} :")
+
+# # Footer
+# print("=" * 67)
+# print(f":{'Total':>37}              :{total_credit:>3}  :{s_points:>5} :")
+# print("=" * 67)
+# print(f": {'Grade Point Average(GPA) : ':<26}{s_points / total_credit:<37}:")
+# print("=" * 67)
