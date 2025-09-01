@@ -11,6 +11,7 @@ lyrics = [
     "I was careless, I forgot, I did",
     "And now when all is done, there is nothing to say",
     "You have won, you can go ahead, tell them",
+    # opjip
     "Tell them all I know now",
     "Shout it from the rooftops",
     "Write it on the skyline",
