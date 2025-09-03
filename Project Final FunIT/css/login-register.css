@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background: linear-gradient(#aa4b6b, #3b8d99);
+    /* background: linear-gradient(#aa4b6b, #3b8d99); */
     display: flex;
     justify-content: center;
     align-items: center;

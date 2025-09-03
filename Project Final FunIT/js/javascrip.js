@@ -29,6 +29,19 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
+// เพิ่มโค้ดนี้ด้านล่าง toggleBtn.addEventListener
+const menuLinks = menu.querySelectorAll('a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // ซ่อนเมนูเมื่อคลิกลิงก์
+    menu.style.top = '-100%';
+    menu.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+});
+
+
 // ปิดเมนูเมื่อคลิกพื้นที่ว่าง
 overlay.addEventListener('click', () => {
     menu.classList.remove('show');
