@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Car No.1</title>
+    <title>Car universo</title>
     <link rel="stylesheet" href="../css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -15,8 +15,7 @@
     <div id="menu">
         <a href="#" onclick="showPage('home')">Home</a>
         <a href="#" onclick="showPage('abount')">Abount</a>
-        <!-- <a href="#" onclick="showPage('brand')">Brand ▼</a> -->
-        <a href="#" onclick="document.getElementById('content-1').scrollIntoView({ behavior: 'smooth' })">Brand ▼</a>
+        <a href="#" onclick="document.getElementById('content-1').scrollIntoView({ behavior: 'smooth' }); return false;">Brand ▼</a>
         <a href="#" onclick="showPage('service')">Service</a>
     </div>
 
@@ -27,11 +26,11 @@
         </div>
 
         <div class="logo">
-            <h1>Logo</h1>
+            <a href="#" onclick="showPage('home')">Logo</a>
         </div>
         
         <div class="login-search">
-            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            <a href="#" onclick="showPage('search')"><ion-icon name="search-outline"></ion-icon></a>
             <ul>
                 <li><a href="../html/login-register.html">Login</a></li>
             </ul>
@@ -84,7 +83,14 @@
         </div>
     </div>
 
-
+    <div class="page" id="search">
+        <div class="search-home">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+        </div>
+    </div>
 
     <div class="page" id="abount">
         <div class="text" id="fade-in">
@@ -92,7 +98,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error neque aliquam rerum laborum quia.</p>
         </div>
     
-        <div class="image-container" id="fade-in">
+        <div class="image-container" id="fade-in" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="image-box">
                 <img src="../img/nine.jpg" alt="Image 1">
                 <div class="overlay-text">
@@ -123,6 +129,11 @@
         </div>
     </div>
 
+    <div class="page" id="service">
+        <div class="service" id="fade-in">
+            <h1>Service</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error neque aliquam rerum laborum quia.</p>
+        </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

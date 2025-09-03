@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .search-box {
+      display: flex;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .search-box input[type="text"] {
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      outline: none;
+    }
+
+    .search-box button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="search-box">
+    <input type="text" placeholder="ค้นหา..." />
+    <button type="submit">ค้นหา</button>
+  </form>
+
+</body>
+</html>

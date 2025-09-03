@@ -137,6 +137,13 @@ nav {
     transform: translateX(-50%);
 }
 
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* --------------------------------------------------- */
 
 .login-search {
@@ -228,24 +235,18 @@ li a {
     justify-content: center;
     /* background-color: aqua; */
 }
+
 .gallery img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-/* .gallery-item {
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.9rem;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
+
 .gallery-item {
     aspect-ratio: 1 / 1; /* ✅ ให้กล่องเป็นสี่เหลี่ยมจัตุรัส */
     display: flex;
     padding: 10px;
+    margin-bottom: 50px;
     justify-content: center;
     align-items: center;
     border-radius: 0.9rem;
@@ -279,6 +280,42 @@ li a {
     align-items: center;
     color: white;
     background-color: black;
+}
+
+/* --------------------------------------------------- */
+/* Search */
+/* --------------------------------------------------- */
+
+.search-home {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    padding-left: 10%;
+}
+.search-box {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 /* --------------------------------------------------- */
