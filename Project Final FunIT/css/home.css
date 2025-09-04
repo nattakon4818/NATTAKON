@@ -131,29 +131,16 @@ nav {
 
 /* --------------------------------------------------- */
 
-.logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* --------------------------------------------------- */
-
 .login-search {
     display: flex;
     gap: 15px;
 }
+
 li {
     list-style: none;
     text-decoration: none;
 }
+
 li a {
     text-decoration: none;
     color: black;
@@ -162,6 +149,7 @@ li a {
     padding: 5px 10px;
     background-color: rgb(255, 255, 255);
 }
+
 .login-search a ion-icon {
     display: flex;
     align-items: center;
@@ -175,19 +163,18 @@ li a {
     display: flex;
     height: 80vh;
     width: 100%;
-    /* background-color: gray; */
 }
 
-.left {
-    display: flex;
-    height: 100%;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
 .head {
     display: block;
+    position: absolute;
+    top: 50%;
+    left: 5%; /* ทำให้ห่างจากซ้าย */
+    transform: translateY(-50%);
+    text-align: left;
+    z-index: 5;
 }
+
 .head h1 {
     font-size: 5rem;
     margin-bottom: 20px;
@@ -196,19 +183,53 @@ li a {
     font-size: 1.2rem;
 }
 
-.rigth {
-    display: block;
-    height: 100%;
-    width: 50%;
+.slider {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    /* background-color: aquamarine; */
 }
-/* .rigth img {
 
-} */
-.rigth h1 {
-    display: flex;
+.slide {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.controls button {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* --------------------------------------------------- */
@@ -273,13 +294,57 @@ li a {
 
 /* --------------------------------------------------- */
 
-.footer {
-    display: flex;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: black;
+footer {
+    display: block;
+    /* height: 60vh; */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+footer p {
+    margin: 4% 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* .footer-logo {
+    background-color: aqua;
+} */
+
+.footer-logo h2 {
+    font-size: 3rem;
+    margin: 25px 0;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 5%;
+}
+
+.footer-links {
+    margin-bottom: 5%;
+    /* background-color: blueviolet; */
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 7%;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2.5%;
+    font-size: 1.5rem;
 }
 
 /* --------------------------------------------------- */
@@ -291,6 +356,7 @@ li a {
     height: 70vh;
     align-items: center;
     padding-left: 10%;
+    /* background-color: grey; */
 }
 .search-box {
     display: flex;
@@ -350,6 +416,8 @@ li a {
 
 .image-box {
     position: relative;
+    aspect-ratio: 1 / 1; /* ✅ ให้กล่องเป็นสี่เหลี่ยมจัตุรัส */
+    display: flex;
     overflow: hidden;
     width: 400px;
     height: 500px;
@@ -358,8 +426,9 @@ li a {
 }
 
 .image-box img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     transition: filter 0.3s ease;
     transition: transform 0.3s ease;

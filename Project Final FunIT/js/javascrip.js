@@ -8,6 +8,8 @@ function showRegister() {
     document.getElementById("loginForm").classList.remove("active");
 }
 
+
+
 const toggleBtn = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 const overlay = document.getElementById('overlay');
@@ -29,6 +31,8 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
+
+
 // เพิ่มโค้ดนี้ด้านล่าง toggleBtn.addEventListener
 const menuLinks = menu.querySelectorAll('a');
 
@@ -40,6 +44,7 @@ menuLinks.forEach(link => {
     overlay.classList.remove('show');
   });
 });
+
 
 
 // ปิดเมนูเมื่อคลิกพื้นที่ว่าง
@@ -56,6 +61,8 @@ function showPage(pageId) {
 
   document.getElementById(pageId).classList.add('active');
 }
+
+
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -77,4 +84,64 @@ lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
   }
+});
+
+
+
+// let currentSlide = 0;
+// const slides = document.querySelectorAll('.slide');
+// const totalSlides = slides.length;
+
+// function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//     slide.classList.remove('active');
+//     if (i === index) {
+//         slide.classList.add('active');
+//     }
+//     });
+// }
+
+// function nextSlide() {
+//     currentSlide = (currentSlide + 1) % totalSlides;
+//     showSlide(currentSlide);
+// }
+
+// function prevSlide() {
+//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+//     showSlide(currentSlide);
+// }
+
+// // Auto slide every 5 seconds
+// setInterval(nextSlide, 6000);
+
+document.addEventListener('DOMContentLoaded', () => {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  // ปุ่ม
+  document.querySelector('.prev').addEventListener('click', prevSlide);
+  document.querySelector('.next').addEventListener('click', nextSlide);
+
+  // Auto slide
+  setInterval(nextSlide, 6000);
 });
