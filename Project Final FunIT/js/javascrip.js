@@ -64,84 +64,36 @@ function showPage(pageId) {
 
 
 
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const images = document.querySelectorAll('.gallery img');
-const closeBtn = document.querySelector('.lightbox .close');
-
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.style.display = 'flex';
-  });
-});
-
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
-  }
-});
-
-
-
-// let currentSlide = 0;
-// const slides = document.querySelectorAll('.slide');
-// const totalSlides = slides.length;
-
-// function showSlide(index) {
-//     slides.forEach((slide, i) => {
-//     slide.classList.remove('active');
-//     if (i === index) {
-//         slide.classList.add('active');
-//     }
-//     });
-// }
-
-// function nextSlide() {
-//     currentSlide = (currentSlide + 1) % totalSlides;
-//     showSlide(currentSlide);
-// }
-
-// function prevSlide() {
-//     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-//     showSlide(currentSlide);
-// }
-
-// // Auto slide every 5 seconds
-// setInterval(nextSlide, 6000);
 
 document.addEventListener('DOMContentLoaded', () => {
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+        });
+    }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-  }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
 
-  // ปุ่ม
-  document.querySelector('.prev').addEventListener('click', prevSlide);
-  document.querySelector('.next').addEventListener('click', nextSlide);
+    // ปุ่ม
+    document.querySelector('.prev').addEventListener('click', prevSlide);
+    document.querySelector('.next').addEventListener('click', nextSlide);
 
-  // Auto slide
-  setInterval(nextSlide, 6000);
+
+    // Auto slide
+    setInterval(nextSlide, 6000);
 });
