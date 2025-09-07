@@ -95,5 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Auto slide
-    setInterval(nextSlide, 6000);
+    setInterval(nextSlide, 4500);
 });

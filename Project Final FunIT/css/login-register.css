@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     /* background: linear-gradient(#aa4b6b, #3b8d99); */
+    background: url('https://i.pinimg.com/736x/08/e4/04/08e404bcd421991b3793dfdbd93ca7c0.jpg') no-repeat center center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
