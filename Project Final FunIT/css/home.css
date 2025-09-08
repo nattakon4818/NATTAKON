@@ -232,6 +232,18 @@ li a {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+
+#background-video {
+    position: fixed;  /* ติดจอแม้เลื่อน */
+    right: 0;
+    bottom: 0;
+    min-width: 100%;  /* เต็มความกว้าง */
+    min-height: 100%; /* เต็มความสูง */
+    z-index: -1;      /* อยู่หลังเนื้อหา */
+    object-fit: cover; /* ครอบคลุมเต็มพื้นที่ */
+  }
+
 /* --------------------------------------------------- */
 
 .content1 {
