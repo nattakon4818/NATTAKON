@@ -107,7 +107,9 @@
 # print(f": {'Grade Point Average(GPA) : ':<26}{s_points / total_credit:<37}:")
 # print("=" * 67)
 
-########################################################################################
+##################################################################
+# 06
+##################################################################
 
 h = "| Main  Menu |"
 l = "=" * len(h)
@@ -295,3 +297,58 @@ while choice != '3':
         print("Area of rectangle = %7.3f" % cal_rectangle(width, height))
     elif choice == "3":
         print("Exit Program.")
+
+##################################################################
+# 07
+##################################################################
+
+def find_max(number):
+    return max(int(digit) for digit in str(number))
+
+# ทดสอบ
+print(find_max(6378942))  # Output: 9
+
+##################################################################
+
+def check_palindrome(number):
+    str_num = str(number)
+    return str_num == str_num[::-1]
+
+# ทดสอบ
+print(check_palindrome(12344321))  # ผลลัพธ์: True
+
+##################################################################
+
+def num_to_text(number):
+    digit_words = {
+        '0': 'ZERO',
+        '1': 'ONE',
+        '2': 'TWO',
+        '3': 'THREE',
+        '4': 'FOUR',
+        '5': 'FIVE',
+        '6': 'SIX',
+        '7': 'SEVEN',
+        '8': 'EIGHT',
+        '9': 'NINE'
+    }
+
+    str_num = str(number)
+    word_list = [digit_words[digit] for digit in str_num]
+    return ' '.join(word_list)
+
+# ทดสอบ
+print(num_to_text(638342))
+
+##################################################################
+
+def dec_to_bin(number):
+    binary = bin(number)[2:]  # ตัด '0b' ออก
+    # เติม 0 ด้านหน้าให้ครบกลุ่มละ 4 บิต
+    padded = binary.zfill((4 - len(binary) % 4) % 4 + len(binary))
+    # แบ่งเป็นกลุ่มละ 4
+    grouped = ' '.join(padded[i:i+4] for i in range(0, len(padded), 4))
+    return grouped
+
+# ทดสอบ
+print(dec_to_bin(142))  # ผลลัพธ์: 1000 1110
