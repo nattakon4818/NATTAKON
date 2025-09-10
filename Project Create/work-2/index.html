@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="../../TailwindTest/src/output.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>My Portfolio</h1>
+        </div>
+        <div class="nav-menu">
+            <a href="#" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); return false;">Home</a>
+            <a href="#" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;">About</a>
+            <a href="#" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;">Projects</a>
+            <a href="#" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">Contact</a>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <h2>Hi I'm Nattakon Nuwan</h2>
+            <p>Discover my projects and skills.</p>
+            <div class="icon">
+                <a href="https://github.com/nattakon4818/NATTAKON.git" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.facebook.com/ni.ne.775227?locale=th_TH" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/nxp_nine/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+        <div class="home-image">
+            <img src="c18d9fbdba8683449bf856d1b084e91d-removebg-preview.png" alt="Portfolio Image">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="c18d9fbdba8683449bf856d1b084e91d-removebg-preview.png" alt="About Image">
+            <div class="about-text">
+                <div class="about-text1">
+                    <p>Hello! I'm Nattakon Nuwan, a passionate developer with experience in web development and design.
+                        <br>I love creating beautiful and functional websites that provide great user experiences. In my free time,
+                        <br>I enjoy exploring new technologies and working on personal projects.
+                    </p>
+                </div>
+                <div class="about-text2">
+                    <p>Skills:</p>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Node.js</li>
+                        <li>Python</li>
+                        <li>Database Management (MySQL)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+            </div>
+        </div>
+        <!-- <img src="c18d9fbdba8683449bf856d1b084e91d-removebg-preview.png" alt="About Image"> -->
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please email me at
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
