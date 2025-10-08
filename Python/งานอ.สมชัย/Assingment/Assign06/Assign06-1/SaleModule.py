@@ -35,37 +35,43 @@ def report_sale(filename):
             # นับจำนวนข้อมูลในแนวนอนแล้วเก็บไว้ในตัวแปร day
             day = len(parts)
 
-        else:
-            # ถ้าไม่มีเครื่องหมาย "," หมายถึงข้อมูลเรียงในแนวตั้ง
-            # สร้างลิสต์ว่างไว้เก็บข้อมูลที่ไม่ว่างเปล่า
-            cleaned_lines = []
+        # ถ้าไม่มีเครื่องหมาย "," หมายถึงข้อมูลเรียงในแนวตั้ง
+        # สร้างลิสต์ว่างไว้เก็บข้อมูลที่ไม่ว่างเปล่า
+        cleaned_lines = []
 
-            # วนลูปอ่านทุกบรรทัดในไฟล์
-            for line in lines:
-                # ตัดช่องว่างและอักขระขึ้นบรรทัดใหม่ออกจากข้อความ
-                stripped_line = line.strip()
+        # วนลูปอ่านทุกบรรทัดในไฟล์
+        for line in lines:
+            # ตัดช่องว่างและอักขระขึ้นบรรทัดใหม่ออกจากข้อความ
+            stripped_line = line.strip()
 
-                # ตรวจสอบว่าบรรทัดนี้ไม่ว่างเปล่า
-                if stripped_line != "":
-                    # ถ้าไม่ว่าง ให้เพิ่มข้อมูลนั้นลงในลิสต์ cleaned_lines
-                    cleaned_lines.append(stripped_line)
+            # ตรวจสอบว่าบรรทัดนี้ไม่ว่างเปล่า
+            if stripped_line != "":
+                # ถ้าไม่ว่าง ให้เพิ่มข้อมูลนั้นลงในลิสต์ cleaned_lines
+                cleaned_lines.append(stripped_line)
 
-            # นับจำนวนข้อมูลในแนวตั้ง แล้วเก็บไว้ในตัวแปร colum
-            colum = len(cleaned_lines)
+        # นับจำนวนข้อมูลในแนวตั้ง แล้วเก็บไว้ในตัวแปร colum
+        colum = len(cleaned_lines)
 
     h = "Report of Sales"
     head = ": No.:"
     day_t = ""
+    colum_t = ""
+    total = 0
+    ttt = "Total:"
 
     for i in range(1, day + 1):
         day_t += f"   Day  {i}   :"
     head += day_t + "   Total    :"
+
+    for n in range(1, colum + 1):
+        colum_t += f":{n:>3} :" + "\n"
+    # colum_t += open(filename, 'r').read()       ทำถึงตรงนี้
+
+
     line = "-" * len(head)
     print(f'{h:^{len(head)}}', line, head, line, sep='\n')
+    print(f"{colum_t}", line, sep='')
+    print(ttt, line, sep='\n')
 
-    for n in range(colum):
-        print(f":{n:>3} :")
-
-
-random_and_save('sale.txt', 5, 7)
+random_and_save('sale.txt', 3, 2)
 report_sale('sale.txt')
