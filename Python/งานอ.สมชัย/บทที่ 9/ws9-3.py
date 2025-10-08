@@ -9,4 +9,4 @@ print('Now, write score to file.')
 scoresStr = []
 fout.writelines(scores)
 fout.close()
-print('Noe closed file.')
+print('Now closed file.')

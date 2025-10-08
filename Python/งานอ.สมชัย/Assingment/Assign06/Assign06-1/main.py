@@ -1,4 +1,5 @@
 from SaleModule import *
+
 def main():
     print('Random sale and save to file "sale.txt".\n')
     random_and_save('sale.txt', 15, 7)
