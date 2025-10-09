@@ -111,244 +111,314 @@
 # 06
 ##################################################################
 
-h = "| Main  Menu |"
-l = "=" * len(h)
+# h = "| Main  Menu |"
+# l = "=" * len(h)
 
-while True:
-    print(l, h, l, " 1. Triangle 1", " 2. Triangle 2", " 3. Triangle 3", " 4. Triangle 4", " 5. Exit", sep='\n')
-    choice = int(input("Enter Choice : "))
+# while True:
+#     print(l, h, l, " 1. Triangle 1", " 2. Triangle 2", " 3. Triangle 3", " 4. Triangle 4", " 5. Exit", sep='\n')
+#     choice = int(input("Enter Choice : "))
 
-    if choice == 1:
-        noc = int(input("\nEnter number of character : "))
-        print()
+#     if choice == 1:
+#         noc = int(input("\nEnter number of character : "))
+#         print()
 
-        for i in range(noc):
-            print("*" * (i + 1))
-        print()
+#         for i in range(noc):
+#             print("*" * (i + 1))
+#         print()
     
-    elif choice == 2:
-        noc = int(input("\nEnter number of character : "))
-        print()
+#     elif choice == 2:
+#         noc = int(input("\nEnter number of character : "))
+#         print()
 
-        for i in range(noc, 0, -1):
-            print("*" * i)
-        print()
+#         for i in range(noc, 0, -1):
+#             print("*" * i)
+#         print()
 
-    elif choice == 3:
-        noc = int(input("\nEnter number of character : "))
-        print()
+#     elif choice == 3:
+#         noc = int(input("\nEnter number of character : "))
+#         print()
 
-        for i in range(1, noc + 1):
-            print(" " * (noc - i) + "*" * i)
-        print()
+#         for i in range(1, noc + 1):
+#             print(" " * (noc - i) + "*" * i)
+#         print()
 
-    elif choice == 4:
-        noc = int(input("\nEnter number of character : "))
-        print()
+#     elif choice == 4:
+#         noc = int(input("\nEnter number of character : "))
+#         print()
 
-        for i in range(noc, 0, -1):
-            print(" " * (noc - i) + "*" * i)
-        print()
+#         for i in range(noc, 0, -1):
+#             print(" " * (noc - i) + "*" * i)
+#         print()
     
-    elif choice == 5:
-        print("\nExit Program ...")
-        break
-    else:
-        print("\nInput error choice.\n")
+#     elif choice == 5:
+#         print("\nExit Program ...")
+#         break
+#     else:
+#         print("\nInput error choice.\n")
 
 ########################################################################################
 
-while True:
-    text = input("Enter text(enter-exit) : ")
-    if text == "":
-        break
+# while True:
+#     text = input("Enter text(enter-exit) : ")
+#     if text == "":
+#         break
     
-    if text.isalpha():
-        print("Text is alphabetic")
+#     if text.isalpha():
+#         print("Text is alphabetic")
         
-    elif text.isdigit():
-        print("Text is digit")
+#     elif text.isdigit():
+#         print("Text is digit")
         
-    elif text.isalnum():
-        print("Text is alpha and numeric")
+#     elif text.isalnum():
+#         print("Text is alpha and numeric")
         
-    else:
-        print("Text is string")
+#     else:
+#         print("Text is string")
 
 ########################################################################################
 
-aeiou = 'aeiou'
+# aeiou = 'aeiou'
 
-while True:
-    text = input("Enter text(enter-exit) : ")
+# while True:
+#     text = input("Enter text(enter-exit) : ")
 
-    if text == "":
-        break
+#     if text == "":
+#         break
 
-    a, e, i, o, u = 0, 0, 0, 0, 0
+#     a, e, i, o, u = 0, 0, 0, 0, 0
 
-    for n in text.lower():
-        if n == 'a':
-            a += 1
-        elif n == 'e':
-            e += 1
-        elif n == 'i':
-            i += 1
-        elif n == 'o':
-            o += 1
-        elif n == 'u':
-            u += 1
+#     for n in text.lower():
+#         if n == 'a':
+#             a += 1
+#         elif n == 'e':
+#             e += 1
+#         elif n == 'i':
+#             i += 1
+#         elif n == 'o':
+#             o += 1
+#         elif n == 'u':
+#             u += 1
 
-    print(f"Text has 'a' : {a}", f"Text has 'e' : {e}", f"Text has 'i' : {i}", f"Text has 'o' : {o}", f"Text has 'u' : {u}", sep='\n')
-
-########################################################################################
-
-import random
-
-head, h = "Main  Menu", "|Grade| Total|"
-line, l = "=" * len(head), "-" * len(h)
-total, count_A, count_B, count_C, count_D, count_F  = 0, 0, 0, 0, 0, 0
-
-while True:
-    print(head, line, " 1. Input Number of Score", " 2. Random Score and Check Grade", " 3. Exit", sep='\n')
-
-    choice = input("Enter Choice : ")
-
-    if choice == '1':
-        total = int(input("Enter number of score : "))
-
-    elif choice == '2':
-        count_A, count_B, count_C, count_D, count_F  = 0, 0, 0, 0, 0
-
-        print("\nStart Random Score ...\nCheck Grade ...\n")
-
-        for i in range(total):
-            score = random.randint(40, 90)
-
-            if score >= 80: count_A += 1
-            elif score >= 70: count_B += 1
-            elif score >= 60: count_C += 1
-            elif score >= 50: count_D += 1
-            else: count_F += 1
-
-        print(l, h, l, f"|  A  | {count_A:>4} |", f"|  B  | {count_B:>4} |", f"|  C  | {count_C:>4} |", f"|  D  | {count_D:>4} |", f"|  F  | {count_F:>4} |", l, f"|Total| {total:>4} |", l, "\n", sep='\n')
-
-    elif choice == '3':
-        print("Exit Program")
-        break
-
+#     print(f"Text has 'a' : {a}", f"Text has 'e' : {e}", f"Text has 'i' : {i}", f"Text has 'o' : {o}", f"Text has 'u' : {u}", sep='\n')
 
 ########################################################################################
 
-name = input('Enter your name : ')
-num = 5
-print()
-print(name * num)
-print("Show Triangle")
-print(num * "*")
-print((num - 1) * "*")
-print((num - 2) * "*")
-print((num - 3) * "*")
-print((num - 4) * "*")
+# import random
 
+# head, h = "Main  Menu", "|Grade| Total|"
+# line, l = "=" * len(head), "-" * len(h)
+# total, count_A, count_B, count_C, count_D, count_F  = 0, 0, 0, 0, 0, 0
 
-name = input('Enter your name : ')
-num = len(name)
-print()
-print(name * num)
-print("Show Triangle name")
-print(name[:num])
-print(name[:num -1])
-print(name[:num -2])
-print(name[:num -3])
-print(name[:num -4])
-print(name[:num -5])
-print(name[:num -6])
+# while True:
+#     print(head, line, " 1. Input Number of Score", " 2. Random Score and Check Grade", " 3. Exit", sep='\n')
+
+#     choice = input("Enter Choice : ")
+
+#     if choice == '1':
+#         total = int(input("Enter number of score : "))
+
+#     elif choice == '2':
+#         count_A, count_B, count_C, count_D, count_F  = 0, 0, 0, 0, 0
+
+#         print("\nStart Random Score ...\nCheck Grade ...\n")
+
+#         for i in range(total):
+#             score = random.randint(40, 90)
+
+#             if score >= 80: count_A += 1
+#             elif score >= 70: count_B += 1
+#             elif score >= 60: count_C += 1
+#             elif score >= 50: count_D += 1
+#             else: count_F += 1
+
+#         print(l, h, l, f"|  A  | {count_A:>4} |", f"|  B  | {count_B:>4} |", f"|  C  | {count_C:>4} |", f"|  D  | {count_D:>4} |", f"|  F  | {count_F:>4} |", l, f"|Total| {total:>4} |", l, "\n", sep='\n')
+
+#     elif choice == '3':
+#         print("Exit Program")
+#         break
+
 
 ########################################################################################
 
-import math
+# name = input('Enter your name : ')
+# num = 5
+# print()
+# print(name * num)
+# print("Show Triangle")
+# print(num * "*")
+# print((num - 1) * "*")
+# print((num - 2) * "*")
+# print((num - 3) * "*")
+# print((num - 4) * "*")
 
-def select_menu():
-    menu = "========\n| Menu |\n========\n"
-    menu += "1. Cricle\n2. Rectangle\n3. Exit\nPlease choice : "
-    choice = input(menu)
-    return(choice)
 
-def cal_cricle(radius):
-    area = math.pi*radius*radius
-    return(area)
+# name = input('Enter your name : ')
+# num = len(name)
+# print()
+# print(name * num)
+# print("Show Triangle name")
+# print(name[:num])
+# print(name[:num -1])
+# print(name[:num -2])
+# print(name[:num -3])
+# print(name[:num -4])
+# print(name[:num -5])
+# print(name[:num -6])
 
-def cal_rectangle(width, height):
-    area = width * height
-    return(area)
+########################################################################################
 
-# Main Program
-print("Program calculate area.")
-choice = ''
-while choice != '3':
-    choice = select_menu()
-    if choice == "1":
-        radius = float(input("Enter radius : "))
-        print("Area of cricle = %7.3f" % cal_cricle(radius))
-    elif choice == "2":
-        width = float(input("Enter width : "))
-        height = float(input("Enter height : "))
-        print("Area of rectangle = %7.3f" % cal_rectangle(width, height))
-    elif choice == "3":
-        print("Exit Program.")
+# import math
+
+# def select_menu():
+#     menu = "========\n| Menu |\n========\n"
+#     menu += "1. Cricle\n2. Rectangle\n3. Exit\nPlease choice : "
+#     choice = input(menu)
+#     return(choice)
+
+# def cal_cricle(radius):
+#     area = math.pi*radius*radius
+#     return(area)
+
+# def cal_rectangle(width, height):
+#     area = width * height
+#     return(area)
+
+# # Main Program
+# print("Program calculate area.")
+# choice = ''
+# while choice != '3':
+#     choice = select_menu()
+#     if choice == "1":
+#         radius = float(input("Enter radius : "))
+#         print("Area of cricle = %7.3f" % cal_cricle(radius))
+#     elif choice == "2":
+#         width = float(input("Enter width : "))
+#         height = float(input("Enter height : "))
+#         print("Area of rectangle = %7.3f" % cal_rectangle(width, height))
+#     elif choice == "3":
+#         print("Exit Program.")
 
 ##################################################################
 # 07
 ##################################################################
 
-def find_max(number):
-    return max(int(digit) for digit in str(number))
+# def find_max(number):
+#     return max(int(digit) for digit in str(number))
 
-# ทดสอบ
-print(find_max(6378942))  # Output: 9
-
-##################################################################
-
-def check_palindrome(number):
-    str_num = str(number)
-    return str_num == str_num[::-1]
-
-# ทดสอบ
-print(check_palindrome(12344321))  # ผลลัพธ์: True
+# # ทดสอบ
+# print(find_max(6378942))  # Output: 9
 
 ##################################################################
 
-def num_to_text(number):
-    digit_words = {
-        '0': 'ZERO',
-        '1': 'ONE',
-        '2': 'TWO',
-        '3': 'THREE',
-        '4': 'FOUR',
-        '5': 'FIVE',
-        '6': 'SIX',
-        '7': 'SEVEN',
-        '8': 'EIGHT',
-        '9': 'NINE'
-    }
+# def check_palindrome(number):
+#     str_num = str(number)
+#     return str_num == str_num[::-1]
 
-    str_num = str(number)
-    word_list = [digit_words[digit] for digit in str_num]
-    return ' '.join(word_list)
-
-# ทดสอบ
-print(num_to_text(638342))
+# # ทดสอบ
+# print(check_palindrome(12344321))  # ผลลัพธ์: True
 
 ##################################################################
 
-def dec_to_bin(number):
-    binary = bin(number)[2:]  # ตัด '0b' ออก
-    # เติม 0 ด้านหน้าให้ครบกลุ่มละ 4 บิต
-    padded = binary.zfill((4 - len(binary) % 4) % 4 + len(binary))
-    # แบ่งเป็นกลุ่มละ 4
-    grouped = ' '.join(padded[i:i+4] for i in range(0, len(padded), 4))
-    return grouped
+# def num_to_text(number):
+#     digit_words = {
+#         '0': 'ZERO',
+#         '1': 'ONE',
+#         '2': 'TWO',
+#         '3': 'THREE',
+#         '4': 'FOUR',
+#         '5': 'FIVE',
+#         '6': 'SIX',
+#         '7': 'SEVEN',
+#         '8': 'EIGHT',
+#         '9': 'NINE'
+#     }
 
-# ทดสอบ
-print(dec_to_bin(142))  # ผลลัพธ์: 1000 1110
+#     str_num = str(number)
+#     word_list = [digit_words[digit] for digit in str_num]
+#     return ' '.join(word_list)
+
+# # ทดสอบ
+# print(num_to_text(638342))
+
+##################################################################
+
+# def dec_to_bin(number):
+#     binary = bin(number)[2:]  # ตัด '0b' ออก
+#     # เติม 0 ด้านหน้าให้ครบกลุ่มละ 4 บิต
+#     padded = binary.zfill((4 - len(binary) % 4) % 4 + len(binary))
+#     # แบ่งเป็นกลุ่มละ 4
+#     grouped = ' '.join(padded[i:i+4] for i in range(0, len(padded), 4))
+#     return grouped
+
+# # ทดสอบ
+# print(dec_to_bin(142))  # ผลลัพธ์: 1000 1110
+
+##################################################################
+
+# from random import randint
+
+# def random_and_save(filename, colum, day):
+#     with open(filename, 'w') as file:
+#         for i in range(1, colum + 1):
+#             for a in range(1, day + 1):
+#                 sale = randint(500, 5000)
+#                 file.write(str(sale))
+#                 if a < day:
+#                     file.write(",")
+#             file.write("\n")
+
+
+# def report_sale(filename):
+#     with open(filename, 'r') as file:
+#         data = file.readlines()
+
+#     first_line = data[0].strip()
+#     days = first_line.split(',')
+#     day = len(days)
+#     colum = len(data)
+
+#     h = "Report of Sales"
+#     header = ": No.:"
+
+#     for d in range(1, day + 1):
+#         header += f"   Day  {d:<2}   :"
+#     header += "   Total    :"
+
+#     line = "-" * len(header)
+
+#     print(f"{h:^{len(header)}}", line, header, line, sep='\n')
+
+#     grand_total = 0  # ยอดรวมทั้งหมด
+#     day_totals = [0] * day  # ยอดรวมแต่ละวัน ต้องประกาศก่อนลูป
+
+#     for i in range(colum):
+#         line_data = data[i].strip()
+#         day_list = line_data.split(',')
+
+#         row = f":{i + 1:>3} :"  # หมายเลขสาขา
+#         branch_total = 0  # ยอดรวมของสาขานี้
+
+#         for d in range(day):
+#             sale = int(day_list[d])
+#             branch_total += sale
+#             day_totals[d] += sale
+#             row += f"  {sale:>7,}  :"
+
+#         row += f"  {branch_total:>9,}  :"
+#         grand_total += branch_total
+
+#         print(row)
+
+#     # แสดงยอดรวมทั้งหมด
+#     total_day_row = f"Total:"
+#     grand_total_2 = 0
+#     for dt in day_totals:
+#         total_day_row += f"  {dt:>7,}  :"
+#         grand_total_2 += dt
+#     total_day_row += f"  {grand_total_2:>9,}  :"
+
+#     print(line)
+#     print(total_day_row)
+
+# random_and_save('sale.txt', 5, 7)
+# report_sale('sale.txt')
