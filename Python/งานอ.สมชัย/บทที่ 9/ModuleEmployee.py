@@ -28,7 +28,7 @@ def report_employee(filename):
     mess += ('-' * 50) + '\n'
     mess += '| No.|  Id  |  Name    | Surname    |   Salary  |\n'
     mess += ('-' * 50) + '\n'
-    n += 1
+    n = 1
     for data in datas:
         mess += f'|{n:3} |{data[0]:5} |{data[1]:10} |{data[2]:12} |'
         mess += format(float(data[3]), ',.2f').rjust(10) + '\n'

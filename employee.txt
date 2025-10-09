@@ -1,0 +1,3 @@
+01,nine,kuy,1500
+10,nine,sldpvk,139429000
+1,nine,kuy,111
