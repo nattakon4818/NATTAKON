@@ -1,4 +1,4 @@
-def member(filename):
+def members(filename):
     print('Member List')
     name = input('Enter name : ')
     fout = open(filename, 'a')
