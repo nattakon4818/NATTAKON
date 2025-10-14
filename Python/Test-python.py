@@ -437,93 +437,196 @@
 
 
 
+############################################################################
 
+
+
+# # ========================
+# # 1. สร้างเมนูอาหารเก็บใน list ของ dictionary
+# # ========================
+
+# # ข้าว 10 อย่าง
+# rice_menu = [
+#     {"name": "Shrimp Fried Rice", "price": 60},
+#     {"name": "Chicken Rice", "price": 50},
+#     {"name": "Garlic Pork Rice", "price": 55},
+#     {"name": "Basil Chicken Rice", "price": 55},
+#     {"name": "Green Curry Rice", "price": 65},
+#     {"name": "Duck Rice", "price": 70},
+#     {"name": "Red Pork Rice", "price": 60},
+#     {"name": "Crab Fried Rice", "price": 80},
+#     {"name": "Basil Seafood Rice", "price": 75},
+#     {"name": "Omelet Rice", "price": 50}
+# ]
+
+# # น้ำ 5 อย่าง
+# drink_menu = [
+#     {"name": "Water", "price": 10},
+#     {"name": "Orange Juice", "price": 30},
+#     {"name": "Thai Iced Tea", "price": 35},
+#     {"name": "Iced Coffee", "price": 35},
+#     {"name": "Coconut Water", "price": 25}
+# ]
+
+# # อาหารว่าง/ขนม 7 อย่าง
+# dessert_menu = [
+#     {"name": "Fried Banana", "price": 20},
+#     {"name": "Thai Coconut Pancakes", "price": 25},
+#     {"name": "Layered Sweet Cake", "price": 30},
+#     {"name": "Mango Sticky Rice", "price": 50},
+#     {"name": "Roti with Condensed Milk", "price": 25},
+#     {"name": "Waffle", "price": 30},
+#     {"name": "Chocolate Cake", "price": 40}
+# ]
+
+# # ========================
+# # 2. ฟังก์ชันแสดงเมนู
+# # ========================
+# def show_menu(menu):
+#     count = 1
+#     for item in menu:
+#         print(f"{count}. {item['name']} - {item['price']} Baht")
+#         count += 1
+
+# # ========================
+# # 3. ฟังก์ชันให้ผู้ใช้เลือกได้หลายอย่าง
+# # ========================
+# def choose_multiple(menu):
+#     print("Enter menu numbers (separate with commas, e.g. 1,3,5):")
+#     show_menu(menu)
+#     selected_items = []
+
+#     while True:
+#         choices = input("Your choices: ").split(",")
+#         try:
+#             for choice in choices:
+#                 c = int(choice.strip())
+#                 if 1 <= c <= len(menu):
+#                     selected_items.append(menu[c - 1])
+#                 else:
+#                     print(f"Menu {c} not found, ignored.")
+#             break
+#         except ValueError:
+#             print("Please enter only numbers separated by commas.")
+#     return selected_items
+
+# # ========================
+# # 4. โปรแกรมหลัก
+# # ========================
+# print("=== RICE MENU ===")
+# selected_rice = choose_multiple(rice_menu)
+
+# print("\n=== DRINK MENU ===")
+# selected_drink = choose_multiple(drink_menu)
+
+# print("\n=== DESSERT MENU ===")
+# selected_dessert = choose_multiple(dessert_menu)
+
+# # รวมเมนูทั้งหมด
+# all_selected = selected_rice + selected_drink + selected_dessert
+# total = sum(item["price"] for item in all_selected)
+
+# # ------------------------
+# # บันทึกลงไฟล์ .txt
+# # ------------------------
+# filename = "sales.txt"
+
+# with open(filename, "a", encoding="utf-8") as file:  # ใช้โหมด 'a' เพื่อเพิ่มข้อมูลต่อท้ายไฟล์
+#     file.write("=== ORDER SUMMARY ===\n")
+#     for item in all_selected:
+#         file.write(f"- {item['name']} ({item['price']} Baht)\n")
+#     file.write(f"Total Price: {total} Baht\n")
+#     file.write("-----------------------------\n")
+
+# print(f"\n✅ Receipt saved to '{filename}' successfully!")
 
 
 
 # ========================
-# 1. สร้างเมนูอาหารเก็บใน list ของ dictionary
+# 1. สร้างเมนูอาหาร
 # ========================
 
-# ข้าว 10 อย่าง
-rice_menu = [
-    {"name": "Shrimp Fried Rice", "price": 60},
-    {"name": "Chicken Rice", "price": 50},
-    {"name": "Garlic Pork Rice", "price": 55},
-    {"name": "Basil Chicken Rice", "price": 55},
-    {"name": "Green Curry Rice", "price": 65},
-    {"name": "Duck Rice", "price": 70},
-    {"name": "Red Pork Rice", "price": 60},
-    {"name": "Crab Fried Rice", "price": 80},
-    {"name": "Basil Seafood Rice", "price": 75},
-    {"name": "Omelet Rice", "price": 50}
-]
+# menu = [
+#     {"name": "Shrimp Fried Rice", "price": 60},
+#     {"name": "Chicken Rice", "price": 50},
+#     {"name": "Garlic Pork Rice", "price": 55},
+#     {"name": "Basil Chicken Rice", "price": 55},
+#     {"name": "Green Curry Rice", "price": 65}
+# ]
 
-# น้ำ 5 อย่าง
-drink_menu = [
-    {"name": "Water", "price": 10},
-    {"name": "Orange Juice", "price": 30},
-    {"name": "Thai Iced Tea", "price": 35},
-    {"name": "Iced Coffee", "price": 35},
-    {"name": "Coconut Water", "price": 25}
-]
+# # ========================
+# # 2. แสดงเมนู
+# # ========================
+# def show_menu():
+#     print("=== FOOD MENU ===")
+#     count = 1
+#     for item in menu:
+#         print(f"{count}. {item['name']} - {item['price']} Baht")
+#         count += 1
 
-# อาหารว่าง/ขนม 7 อย่าง
-dessert_menu = [
-    {"name": "Fried Banana", "price": 20},
-    {"name": "Thai Coconut Pancakes", "price": 25},
-    {"name": "Layered Sweet Cake", "price": 30},
-    {"name": "Mango Sticky Rice", "price": 50},
-    {"name": "Roti with Condensed Milk", "price": 25},
-    {"name": "Waffle", "price": 30},
-    {"name": "Chocolate Cake", "price": 40}
-]
+# # ========================
+# # 3. เลือกอาหารหลายอย่าง
+# # ========================
+# def choose_food():
+#     show_menu()
+#     print("Enter menu numbers (e.g. 1,3,5):")
+#     choices = input("Your choices: ").split(",")
+#     selected = []
+#     for choice in choices:
+#         try:
+#             number = int(choice.strip())
+#             if 1 <= number <= len(menu):
+#                 selected.append(menu[number - 1])
+#             else:
+#                 print(f"Menu {number} not found, ignored.")
+#         except ValueError:
+#             print(f"'{choice}' is not a number, ignored.")
+#     return selected
 
-# ========================
-# 2. ฟังก์ชันแสดงเมนู
-# ========================
-def show_menu(menu):
-    for idx, item in enumerate(menu, start=1):
-        print(f"{idx}. {item['name']} - {item['price']} Baht")
+# # ========================
+# # 4. บันทึกใบเสร็จตามหมายเลขโต๊ะ
+# # ========================
+# def save_receipt(table_number, orders):
+#     filename = f"receipt_table{table_number}.txt"
+#     total = sum(item["price"] for item in orders)
 
-# ========================
-# 3. ให้ผู้ใช้เลือกเมนู
-# ========================
-def choose_menu(menu):
-    while True:
-        try:
-            choice = int(input(f"Enter menu number (1-{len(menu)}): "))
-            if 1 <= choice <= len(menu):
-                return menu[choice - 1]
-            else:
-                print("Invalid number. Try again.")
-        except ValueError:
-            print("Please enter a number.")
+#     with open(filename, "a", encoding="utf-8") as file:
+#         file.write(f"=== RECEIPT - TABLE {table_number} ===\n")
+#         for item in orders:
+#             file.write(f"- {item['name']} ({item['price']} Baht)\n")
+#         file.write(f"Total Price: {total} Baht\n")
+#         file.write("-----------------------------\n")
 
-# ========================
-# 4. โปรแกรมหลัก
-# ========================
-print("=== Rice Menu ===")
-show_menu(rice_menu)
-selected_rice = choose_menu(rice_menu)
-print(f"You selected: {selected_rice['name']} - {selected_rice['price']} Baht\n")
+#     print(f"\n✅ Receipt saved for Table {table_number}")
+#     print(f"Total: {total} Baht\n")
 
-print("=== Drink Menu ===")
-show_menu(drink_menu)
-selected_drink = choose_menu(drink_menu)
-print(f"You selected: {selected_drink['name']} - {selected_drink['price']} Baht\n")
+# # ========================
+# # 5. โปรแกรมหลัก
+# # ========================
+# print("=== WELCOME TO OUR RESTAURANT ===")
+# table = input("Enter table number: ")
 
-print("=== Dessert Menu ===")
-show_menu(dessert_menu)
-selected_dessert = choose_menu(dessert_menu)
-print(f"You selected: {selected_dessert['name']} - {selected_dessert['price']} Baht\n")
+# orders = choose_food()
+# save_receipt(table, orders)
 
-# ========================
-# 5. แสดงสรุปรวม
-# ========================
-total = selected_rice['price'] + selected_drink['price'] + selected_dessert['price']
-print("=== Order Summary ===")
-print(f"Rice: {selected_rice['name']} - {selected_rice['price']} Baht")
-print(f"Drink: {selected_drink['name']} - {selected_drink['price']} Baht")
-print(f"Dessert: {selected_dessert['name']} - {selected_dessert['price']} Baht")
-print(f"Total: {total} Baht")
+
+# h = f':{'Menu (Food)':^32}:'
+# line = '-' * len(h)
+# print(line, h, line, sep='\n')
+
+# food = [
+#     {"name": "Shrimp Fried Rice", "price": 60},
+#     {"name": "Chicken Rice", "price": 50},
+#     {"name": "Garlic Pork Rice", "price": 55},
+#     {"name": "Basil Chicken Rice", "price": 55},
+#     {"name": "Green Curry Rice", "price": 65},
+#     {"name": "Duck Rice", "price": 70},
+#     {"name": "Red Pork Rice", "price": 60},
+#     {"name": "Crab Fried Rice", "price": 80},
+#     {"name": "Basil Seafood Rice", "price": 75},
+#     {"name": "Omelet Rice", "price": 50}
+# ]
+
+# for i in food:
+#     print(f': {i["name"]:<25}:{i["price"]:^5}:')
+    # print("Name:", i["name"], "Age:", i["price"])
