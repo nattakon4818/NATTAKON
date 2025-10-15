@@ -1,5 +1,4 @@
-from Food_and_Drink import *
-from members import *
+from Mymodule import *
 
 DATAFILEMEMBERR = 'Members.txt'
 
@@ -17,8 +16,8 @@ def main():
             break
         elif choice == 1:
             Menu('Menu.txt')
-        elif choice == 2:
-            members(DATAFILEMEMBERR)
+        # elif choice == 2:
+            # members(DATAFILEMEMBERR)
         elif choice == 3:
             sales_record('sales.txt')
         elif choice == 4:

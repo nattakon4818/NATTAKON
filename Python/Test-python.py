@@ -630,3 +630,15 @@
 # for i in food:
 #     print(f': {i["name"]:<25}:{i["price"]:^5}:')
     # print("Name:", i["name"], "Age:", i["price"])
+
+
+# head = f'|{'Register Member':^30}|'
+# print(f'-' * len(head), head, f'-' * len(head), sep='\n')
+
+
+# h = f':{'WELCOME TO RESTAURANT':^30}:'
+# line = '-' * len(h)
+# ch = f": {'1. Food':<29}:\n: {'2. Drink':<29}:\n: {'3. Snack':<29}:"
+# print('', line, h, line, ch, line, sep='\n')
+
+

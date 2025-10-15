@@ -39,17 +39,23 @@ dessert_menu = [
 # 2) ฟังก์ชันแสดงเมนู
 # ===============================
 def show_menu(menu, title):
-    print(f"\n=== {title} ===")
-    for i, item in enumerate(menu, start=1):
-        print(f"{i}. {item['name']} - {item['price']} Baht")
-
+    h = f"|{title:^39}|"
+    head = f'| No.|{'Name':^26}|{'Price':^7}|'
+    l = '=' * len(h)
+    print('', l, f'|{'':39}|', h, f'|{'':39}|', l, head, l, sep='\n')
+    
+    i = 1  # เริ่มนับจากเลข 1
+    for item in menu:
+        print(f"|{i:>3} | {item['name']:<25}|{item['price']:^4}.- |")
+        i += 1  # เพิ่มค่า i ทีละ 1 ทุกครั้งที่วนลูป
+    print(l)
 
 # ===============================
 # 3) ฟังก์ชันเลือกอาหาร
 # ===============================
 def choose_items(menu, title):
     show_menu(menu, title)
-    choices = input("Enter menu numbers (e.g. 1,3,5) or press Enter to skip: ")
+    choices = input("Enter menu numbers (1,3,5 or Enter to skip) : ")
     selected = []
 
     if choices.strip() == "":
@@ -75,13 +81,13 @@ def choose_items(menu, title):
 # 4) ฟังก์ชันบันทึกสมาชิก
 # ===============================
 def register_member():
-    name = input("Enter member name: ")
-    table = input("Enter table number: ")
+    name = input("Enter member name : ")
+    table = input("Enter table number : ")
 
     with open("member.txt", "a", encoding="utf-8") as f:
         f.write(f"{name},{table}\n")
 
-    print(f"✅ Member '{name}' registered at Table {table}")
+    print(f"Member '{name}' registered at Table {table}")
     return name, table
 
 
@@ -108,7 +114,7 @@ def save_receipt(member_name, table, all_orders, total):
         f.write(f"Total Price: {total} Baht\n")
         f.write("-----------------------------\n")
 
-    print("\n💾 Receipt saved to sales.txt")
+    # print("\n💾 Receipt saved to sales.txt")
 
 
 # ===============================
@@ -131,7 +137,7 @@ def find_table_sales(table_number):
 # ===============================
 # 8) สรุปยอดขายรายวัน
 # ===============================
-def daily_sales_report(data):
+def daily_sales_report():
     total_sales = 0
     today = datetime.datetime.now().strftime("%Y-%m-%d")
 
@@ -147,3 +153,4 @@ def daily_sales_report(data):
         print(f"Total Sales: {total_sales} Baht")
     except FileNotFoundError:
         print("No sales data found.")
+

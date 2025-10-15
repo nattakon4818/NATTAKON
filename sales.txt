@@ -1,0 +1,5 @@
+=== TABLE 1 | MEMBER: nine | DATE: 2025-10-15 22:26:43 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Water x 1 = 10 Baht
+Total Price: 70 Baht
+-----------------------------
