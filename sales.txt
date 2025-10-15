@@ -1,6 +1,0 @@
-=== TABLE 1 | MEMBER: nine | DATE: 2025-10-10 19:45:14 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-- Ice Cream x 1 = 30 Baht
-Total Price: 0.0 Baht
------------------------------

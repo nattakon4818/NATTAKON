@@ -1,8 +1,0 @@
-=== RECEIPT - TABLE 1 ===
-- Shrimp Fried Rice (60 Baht)
-- Chicken Rice (50 Baht)
-- Garlic Pork Rice (55 Baht)
-- Basil Chicken Rice (55 Baht)
-- Green Curry Rice (65 Baht)
-Total Price: 285 Baht
------------------------------
