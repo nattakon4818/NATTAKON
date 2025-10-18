@@ -33,10 +33,10 @@ def main():
             
                 total = calculate_total(all_orders, discount)
 
-                print('\n=== ORDER SUMMARY ===')
+                print(f'\n=== ORDER SUMMARY ===')
                 for item in all_orders:
                     print(f"{item['name']} x {item['qty']} = {item['price'] * item['qty']} .-")
-                print(f"\nDiscount : {discount:<3}%{'':29}", f"Total : {total:>4,.2f} .-", sep='\n')
+                print('-' * 21, f"Discount : {discount:<3}%{'':29}", f"Total : {total:>4,.2f} .-", sep='\n')
 
                 save_receipt(member_name, table, all_orders, total)
 
@@ -47,7 +47,7 @@ def main():
 
             elif choice == 3:
                 print('Exit program.')
-                break
+                return
                     
             again = input('\nDo you want to return to the main menu? (y/n): ').strip().lower()
             if again != 'y':
