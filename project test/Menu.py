@@ -1,8 +1,5 @@
 import datetime
 
-# ===============================
-# 1) เมนูอาหาร เครื่องดื่ม ขนม
-# ===============================
 food_menu = [
     {"name": "Shrimp Fried Rice", "price": 60},
     {"name": "Chicken Rice", "price": 50},
@@ -34,25 +31,18 @@ dessert_menu = [
     {"name": "Bread Toast", "price": 25}
 ]
 
-
-# ===============================
-# 2) ฟังก์ชันแสดงเมนู
-# ===============================
 def show_menu(menu, title):
     h = f"|{title:^39}|"
     head = f'| No.|{'Name':^26}|{'Price':^7}|'
     l = '=' * len(h)
     print('', l, f'|{'':39}|', h, f'|{'':39}|', l, head, l, sep='\n')
     
-    i = 1  # เริ่มนับจากเลข 1
+    i = 1
     for item in menu:
         print(f"|{i:>3} | {item['name']:<25}|{item['price']:^4}.- |")
-        i += 1  # เพิ่มค่า i ทีละ 1 ทุกครั้งที่วนลูป
+        i += 1
     print(l)
 
-# ===============================
-# 3) ฟังก์ชันเลือกอาหาร
-# ===============================
 def choose_items(menu, title):
     show_menu(menu, title)
     choices = input("Enter menu numbers (1,3,5 or Enter to skip) : ")
@@ -65,7 +55,7 @@ def choose_items(menu, title):
         try:
             index = int(choice.strip()) - 1
             if 0 <= index < len(menu):
-                qty = int(input(f"Quantity for {menu[index]['name']}: "))
+                qty = int(input(f"Quantity for {menu[index]['name']} : "))
                 selected.append({
                     "name": menu[index]["name"],
                     "price": menu[index]["price"],
@@ -76,10 +66,6 @@ def choose_items(menu, title):
 
     return selected
 
-
-# ===============================
-# 4) ฟังก์ชันบันทึกสมาชิก
-# ===============================
 def register_member():
     name = input("Enter member name : ")
     table = input("Enter table number : ")
@@ -90,20 +76,12 @@ def register_member():
     print(f"Member '{name}' registered at Table {table}")
     return name, table
 
-
-# ===============================
-# 5) คำนวณราคาทั้งหมด + ส่วนลด
-# ===============================
 def calculate_total(orders, discount=0):
     total = sum(item["price"] * item["qty"] for item in orders)
     if discount > 0:
         total = total - (total * discount / 100)
     return total
 
-
-# ===============================
-# 6) บันทึกใบเสร็จ
-# ===============================
 def save_receipt(member_name, table, all_orders, total):
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -114,12 +92,6 @@ def save_receipt(member_name, table, all_orders, total):
         f.write(f"Total Price: {total} Baht\n")
         f.write("-----------------------------\n")
 
-    # print("\n💾 Receipt saved to sales.txt")
-
-
-# ===============================
-# 7) ค้นหาข้อมูลใบเสร็จตามโต๊ะ
-# ===============================
 def find_table_sales(table_number):
     print(f"\n=== SALES FOR TABLE {table_number} ===")
     found = False
@@ -133,10 +105,6 @@ def find_table_sales(table_number):
                 if "-----------------------------" in line:
                     found = False
 
-
-# ===============================
-# 8) สรุปยอดขายรายวัน
-# ===============================
 def daily_sales_report():
     total_sales = 0
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -145,7 +113,7 @@ def daily_sales_report():
         with open("sales.txt", "r", encoding="utf-8") as f:
             for line in f:
                 if line.startswith("Total Price:"):
-                    price = int(line.replace("Total Price:", "").replace("Baht", "").strip())
+                    price = float(line.replace("Total Price:", "").replace("Baht", "").strip())
                     total_sales += price
 
         print("\n=== DAILY SALES REPORT ===")
@@ -153,4 +121,3 @@ def daily_sales_report():
         print(f"Total Sales: {total_sales} Baht")
     except FileNotFoundError:
         print("No sales data found.")
-
