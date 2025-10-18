@@ -60,7 +60,3 @@ def report_sale(filename):
     total_day_row += f"{grand_total_2:>11,.2f} :"
 
     print(line, total_day_row, line, sep='\n')
-
-
-random_and_save('sale.txt', 15, 7)
-report_sale('sale.txt')
