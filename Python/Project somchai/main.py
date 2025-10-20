@@ -3,9 +3,19 @@ from Menu import *
 def main():
     while True:
         head = f'|{'Register Member':^30}|'
-        print('', f'-' * len(head), head, f'-' * len(head), sep='\n')
-        
-        member_name, table = register_member()
+        line = '-' * len(head)
+        ch = f": {'1. Register Member':<29}:\n: {'2. Delete Member':<29}:"
+        print(line, head, line, ch, line, sep='\n')
+
+        choice = int(input('Enter choice : '))
+    
+        if choice == 1:
+            member_name, table = register_member()
+        elif choice  == 2:
+            delete_member()
+        else:
+            print('Please enter a valid number (1 or 2).\n')
+            continue
 
         while True:
             h = f':{'WELCOME TO RESTAURANT':^30}:'
@@ -26,7 +36,7 @@ def main():
                 ans = input("\nApply member discount? (y/n) : ")
                 if ans.lower() == "y":
                     try:
-                        discount = int(input("Enter discount percentage: "))
+                        discount = int(input("Enter discount percentage : "))
                     except ValueError:
                         discount = 0
                         print("Invalid input. No discount applied.")
@@ -41,15 +51,17 @@ def main():
                 save_receipt(member_name, table, all_orders, total)
 
             elif choice == 2:
-                check = input("\nView daily sales summary? (y/n): ")
-                if check.lower() == "y":
-                    daily_sales_report()
+                daily_sales_report()
 
             elif choice == 3:
                 print('Exit program.')
                 return
+
+            else:
+                print('Please enter a valid number (1 - 3).')
+                continue
                     
-            again = input('\nDo you want to return to the main menu? (y/n): ').strip().lower()
+            again = input('\nDo you want to return to the main menu? (y/n) : ').strip().lower()
             if again != 'y':
                 print('Thank you for visiting! Goodbye!')
                 break

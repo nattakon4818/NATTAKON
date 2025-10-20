@@ -642,3 +642,20 @@
 # print('', line, h, line, ch, line, sep='\n')
 
 
+from ModuleTest import *
+
+# head = f'|{'Register Member':^30}|'
+# line = '-' * len(head)
+# ch = f": {'1. Register Member':<29}:\n: {'2. Delete Member':<29}:"
+# print(line, head, line, ch, line, sep='\n')
+
+# choice = int(input('Enter choice : '))
+
+# if choice == 1:
+#     member_name, table = register_member()
+# elif choice  == 2:
+#     delete_member()
+
+# check = input("\nView daily sales summary? (y/n) : ")
+# if check.lower() == "y":
+#     daily_sales_report()

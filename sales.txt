@@ -1,22 +1,25 @@
-=== TABLE 1 | MEMBER: nine | DATE: 2025-10-18 15:19:48 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-- Ice Cream x 1 = 30 Baht
-Total Price: 100 Baht
------------------------------
-=== TABLE 1 | MEMBER: nine | DATE: 2025-10-18 16:36:47 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 0.0 Baht
------------------------------
-=== TABLE 2 | MEMBER: nine | DATE: 2025-10-18 16:40:33 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Coke x 1 = 20 Baht
-- Ice Cream x 1 = 30 Baht
-Total Price: 107.8 Baht
------------------------------
-=== TABLE 4 | MEMBER: nine | DATE: 2025-10-18 16:44:14 ===
+=== TABLE 1 | MEMBER: nine | DATE: 2025-10-20 21:52:12 ===
 - Shrimp Fried Rice x 1 = 60 Baht
 - Water x 1 = 10 Baht
 Total Price: 70 Baht
+-----------------------------
+=== TABLE 2 | MEMBER: fifa | DATE: 2025-10-20 21:52:12 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Water x 1 = 10 Baht
+Total Price: 100 Baht
+-----------------------------
+=== TABLE 1 | MEMBER: aut | DATE: 2025-10-21 21:52:12 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Water x 1 = 10 Baht
+Total Price: 100 Baht
+-----------------------------
+=== TABLE 2 | MEMBER: two | DATE: 2025-10-21 21:52:12 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Water x 1 = 10 Baht
+Total Price: 200 Baht
+-----------------------------
+=== TABLE 3 | MEMBER: one | DATE: 2025-10-21 21:52:12 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Water x 1 = 10 Baht
+Total Price: 200 Baht
 -----------------------------
