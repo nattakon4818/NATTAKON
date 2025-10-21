@@ -1,2 +1,3 @@
 MEMBER : nine | TABLE : 1
-MEMBER : aut | TABLE : 5
+MEMBER : aut | TABLE : 2
+MEMBER : fifa | TABLE : 3

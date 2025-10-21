@@ -1,25 +1,18 @@
-=== TABLE 1 | MEMBER: nine | DATE: 2025-10-20 21:52:12 ===
+=== TABLE 1 | MEMBER: nine | DATE: 2025-10-21 11:57:10 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Cookie x 1 = 20 Baht
+Total Price: 79.2 Baht
+-----------------------------
+=== TABLE 2 | MEMBER: aut | DATE: 2025-10-21 12:00:29 ===
 - Shrimp Fried Rice x 1 = 60 Baht
 - Water x 1 = 10 Baht
 Total Price: 70 Baht
 -----------------------------
-=== TABLE 2 | MEMBER: fifa | DATE: 2025-10-20 21:52:12 ===
+=== TABLE 3 | MEMBER: fifa | DATE: 2025-10-21 12:02:27 ===
 - Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 100 Baht
------------------------------
-=== TABLE 1 | MEMBER: aut | DATE: 2025-10-21 21:52:12 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 100 Baht
------------------------------
-=== TABLE 2 | MEMBER: two | DATE: 2025-10-21 21:52:12 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 200 Baht
------------------------------
-=== TABLE 3 | MEMBER: one | DATE: 2025-10-21 21:52:12 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 200 Baht
+- Garlic Pork Rice x 1 = 55 Baht
+- Duck Rice x 1 = 70 Baht
+- Red Pork Rice x 1 = 60 Baht
+- Water x 4 = 40 Baht
+Total Price: 285 Baht
 -----------------------------
