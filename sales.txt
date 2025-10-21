@@ -48,3 +48,66 @@ Total Price: 130.0 Baht
 - น้ำเปล่า x 1 = 10.0 Baht
 Discount: 4%
 Total Price: 67.2 Baht
+=== TABLE 2 | MEMBER: d;;;.g | DATE: 2025-10-22 00:56:25 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 1 = 50.0 Baht
+- Water x 2 = 20.0 Baht
+Total Price: 130.0 Baht
+=== TABLE 1 | MEMBER: e | DATE: 2025-10-22 01:04:23 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Water x 1 = 10.0 Baht
+Total Price: 70.0 Baht
+=== TABLE 1 | MEMBER: s | DATE: 2025-10-22 01:06:56 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Water x 1 = 10.0 Baht
+Total Price: 70.0 Baht
+=== TABLE 6 | MEMBER: lp | DATE: 2025-10-22 01:11:33 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Green Curry Chicken x 1 = 65.0 Baht
+- Garlic Pork Fried Rice x 1 = 55.0 Baht
+- Water x 5 = 50.0 Baht
+Total Price: 230.0 Baht
+=== TABLE 1 | MEMBER: d | DATE: 2025-10-22 01:16:35 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 1 = 50.0 Baht
+- Thai Iced Tea x 2 = 40.0 Baht
+Total Price: 150.0 Baht
+=== TABLE 1 | MEMBER: q | DATE: 2025-10-22 01:22:27 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 1 = 50.0 Baht
+- Water x 2 = 20.0 Baht
+- Brownie x 1 = 40.0 Baht
+Total Price: 170.0 Baht
+=== TABLE 1 | MEMBER: s | DATE: 2025-10-22 01:28:35 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 1 = 50.0 Baht
+- Garlic Pork Fried Rice x 1 = 55.0 Baht
+- Mixed Vegetable Fried Rice x 1 = 45.0 Baht
+- Pad Thai With Fresh Shrimp x 1 = 70.0 Baht
+- Water x 5 = 50.0 Baht
+- Chocolate Cake x 1 = 40.0 Baht
+- Donut x 2 = 50.0 Baht
+- Brownie x 4 = 160.0 Baht
+Discount: 2%
+Total Price: 568.4 Baht
+=== TABLE 1 | MEMBER: e | DATE: 2025-10-22 01:30:48 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Water x 1 = 10.0 Baht
+- Chocolate Cake x 1 = 40.0 Baht
+Total Price: 110.0 Baht
+=== TABLE 6 | MEMBER: d | DATE: 2025-10-22 01:52:43 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 2 = 100.0 Baht
+- Garlic Pork Fried Rice x 1 = 55.0 Baht
+- Mixed Vegetable Fried Rice x 1 = 45.0 Baht
+- Pad Thai With Fresh Shrimp x 1 = 70.0 Baht
+- Tom Yum Goong x 1 = 80.0 Baht
+- Green Curry Chicken x 1 = 65.0 Baht
+- Thai Papaya Salad x 2 = 100.0 Baht
+- Glass Noodle Salad x 1 = 55.0 Baht
+- Water x 11 = 110.0 Baht
+- Chocolate Cake x 1 = 40.0 Baht
+- Butter Cookies x 4 = 80.0 Baht
+- Blueberry Muffin x 2 = 70.0 Baht
+Discount: 1%
+Total Price: 920.7 Baht

@@ -1,37 +1,37 @@
 === food ===
-1,ข้าวผัดกุ้ง,60
-2,ข้าวมันไก่,50
-3,ข้าวหมูทอดกระเทียม,55
-4,ข้าวผัดผักรวม,45
-5,ผัดไทยกุ้งสด,70
-6,ต้มยำกุ้ง,80
-7,แกงเขียวหวานไก่,65
-8,ส้มตำไทย,50
-9,ยำวุ้นเส้น,55
-10,ก๋วยเตี๋ยวหมูน้ำใส,50
-11,ข้าวหน้าเป็ด,75
-12,ข้าวหน้าหมูแดง,65
-13,ข้าวหน้าไก่ทอด,60
-14,ข้าวกระเพราไก่,55
-15,ข้าวแกงกะหรี่หมู,70
+1,Fried Rice With Shrimp,60
+2,Hainanese Chicken Rice,50
+3,Garlic Pork Fried Rice,55
+4,Mixed Vegetable Fried Rice,45
+5,Pad Thai With Fresh Shrimp,70
+6,Tom Yum Goong,80
+7,Green Curry Chicken,65
+8,Thai Papaya Salad,50
+9,Glass Noodle Salad,55
+10,Clear Soup Pork Noodles,50
+11,Roast Duck Rice,75
+12,Red Pork Rice,65
+13,Fried Chicken Rice,60
+14,Basil Chicken Rice,55
+15,Pork Curry Rice,70
 ---------------------------
 === drink ===
-1,น้ำเปล่า,10
-2,น้ำอัดลม,15
-3,น้ำส้มคั้น,25
-4,น้ำผลไม้รวม,30
-5,ชาเย็น,20
-6,กาแฟเย็น,25
-7,นมสด,20
-8,น้ำมะนาว,15
-9,น้ำสมุนไพร,20
-10,น้ำแร่,15
+1,Water,10
+2,Soft Drink,15
+3,Fresh Orange Juice,25
+4,Mixed Fruit Juice,30
+5,Thai Iced Tea,20
+6,Iced Coffee,25
+7,Fresh Milk,20
+8,Lemon Juice,15
+9,Herbal Drink,20
+10,Mineral Water,15
 ---------------------------
 === snack ===
-1,เค้กช็อกโกแลต,40
-2,คุกกี้เนย,20
-3,มัฟฟินบลูเบอร์รี่,35
-4,โดนัท,25
-5,วาฟเฟิล,30
-6,พายผลไม้,35
-7,บราวนี่,40
+1,Chocolate Cake,40
+2,Butter Cookies,20
+3,Blueberry Muffin,35
+4,Donut,25
+5,Waffle,30
+6,Fruit Pie,35
+7,Brownie,40
