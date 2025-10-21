@@ -136,18 +136,18 @@ def save_receipt(member_name, table, all_orders, total):
         f.write(f"Total Price: {total} Baht\n")
         f.write("-----------------------------\n")
 
-def find_table_sales(table_number):
-    print(f"\n=== SALES FOR TABLE {table_number} ===")
-    found = False
+# def find_table_sales(table_number):
+#     print(f"\n=== SALES FOR TABLE {table_number} ===")
+#     found = False
 
-    with open("sales.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            if f"TABLE {table_number}" in line:
-                found = True
-            if found:
-                print(line.strip())
-                if "-----------------------------" in line:
-                    found = False
+#     with open("sales.txt", "r", encoding="utf-8") as f:
+#         for line in f:
+#             if f"TABLE {table_number}" in line:
+#                 found = True
+#             if found:
+#                 print(line.strip())
+#                 if "-----------------------------" in line:
+#                     found = False
 
 def daily_sales_report():
     while True:

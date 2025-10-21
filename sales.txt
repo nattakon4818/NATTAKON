@@ -1,18 +1,50 @@
-=== TABLE 1 | MEMBER: nine | DATE: 2025-10-21 11:57:10 ===
+=== TABLE 1 | MEMBER: nine | DATE: 2025-10-21 12:35:02 ===
 - Shrimp Fried Rice x 1 = 60 Baht
-- Cookie x 1 = 20 Baht
-Total Price: 79.2 Baht
------------------------------
-=== TABLE 2 | MEMBER: aut | DATE: 2025-10-21 12:00:29 ===
-- Shrimp Fried Rice x 1 = 60 Baht
-- Water x 1 = 10 Baht
-Total Price: 70 Baht
------------------------------
-=== TABLE 3 | MEMBER: fifa | DATE: 2025-10-21 12:02:27 ===
-- Shrimp Fried Rice x 1 = 60 Baht
+- Chicken Rice x 1 = 50 Baht
 - Garlic Pork Rice x 1 = 55 Baht
-- Duck Rice x 1 = 70 Baht
-- Red Pork Rice x 1 = 60 Baht
-- Water x 4 = 40 Baht
-Total Price: 285 Baht
+- Water x 1 = 10 Baht
+- Coke x 1 = 20 Baht
+- Iced Tea x 1 = 25 Baht
+Total Price: 0.0 Baht
 -----------------------------
+=== TABLE 2 | MEMBER: aut | DATE: 2025-10-25 12:35:02 ===
+- Shrimp Fried Rice x 1 = 60 Baht
+- Chicken Rice x 1 = 50 Baht
+- Garlic Pork Rice x 1 = 55 Baht
+- Water x 1 = 10 Baht
+- Coke x 1 = 20 Baht
+- Iced Tea x 1 = 25 Baht
+Total Price: 100.0 Baht
+-----------------------------
+=== TABLE 1 | MEMBER: pratchaya | DATE: 2025-10-21 20:01:19 ===
+- Shrimp Fried Rice x 2 = 120 Baht
+- Coke x 1 = 20 Baht
+- Iced Tea x 2 = 50 Baht
+- Cookie x 3 = 60 Baht
+Total Price: 150.0 Baht
+-----------------------------
+=== TABLE 1 | MEMBER: pratchaya | DATE: 2025-10-23 20:01:19 ===
+- Shrimp Fried Rice x 2 = 120 Baht
+- Coke x 1 = 20 Baht
+- Iced Tea x 2 = 50 Baht
+- Cookie x 3 = 60 Baht
+Total Price: 150.0 Baht
+-----------------------------
+=== TABLE 1 | MEMBER: pratchaya | DATE: 2025-10-27 20:01:19 ===
+- Shrimp Fried Rice x 2 = 120 Baht
+- Coke x 1 = 20 Baht
+- Iced Tea x 2 = 50 Baht
+- Cookie x 3 = 60 Baht
+Total Price: 150.0 Baht
+-----------------------------
+=== TABLE 5 | MEMBER: nine | DATE: 2025-10-21 21:34:25 ===
+- ข้าวผัดกุ้ง x 1 = 60.0 Baht
+- ข้าวมันไก่ x 1 = 50.0 Baht
+- น้ำเปล่า x 2 = 20.0 Baht
+Total Price: 130.0 Baht
+-----------------------------
+=== TABLE 4 | MEMBER: kuy | DATE: 2025-10-21 22:05:58 ===
+- ข้าวผัดกุ้ง x 1 = 60.0 Baht
+- น้ำเปล่า x 1 = 10.0 Baht
+Discount: 4%
+Total Price: 67.2 Baht
