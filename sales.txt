@@ -111,3 +111,10 @@ Total Price: 110.0 Baht
 - Blueberry Muffin x 2 = 70.0 Baht
 Discount: 1%
 Total Price: 920.7 Baht
+=== TABLE 8 | MEMBER: fifa | DATE: 2025-10-22 15:38:20 ===
+- Fried Rice With Shrimp x 1 = 60.0 Baht
+- Hainanese Chicken Rice x 1 = 50.0 Baht
+- Garlic Pork Fried Rice x 1 = 55.0 Baht
+- Water x 3 = 30.0 Baht
+Discount: 5%
+Total Price: 185.25 Baht
