@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มาง้อหมาเด็กกก</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white;
+            border-radius: 30px;
+            padding: 50px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 90%;
+            width: 100%;
+            position: relative;
+        }
+
+        .emoji {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+            position: relative;
+            min-height: 250px;
+        }
+
+        button {
+            padding: 18px 60px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        #yesBtn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+            position: relative;
+        }
+
+        #yesBtn:active {
+            transform: scale(0.95);
+        }
+
+        #noBtn {
+            background: #e0e0e0;
+            color: #666;
+            position: absolute;
+            top: 70px;
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #f5576c;
+            font-weight: bold;
+            min-height: 30px;
+            animation: fadeIn 0.5s;
+            padding: 0 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success {
+            display: none;
+        }
+
+        .success.show {
+            display: block;
+            animation: zoomIn 0.5s;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .hearts {
+            font-size: 35px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            
+            button {
+                font-size: 18px;
+                padding: 15px 50px;
+            }
+            
+            .emoji {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🥺</div>
+        <h1 id="question">มาง้อหมาเด็กของพี่</h1>
+        
+        <div class="buttons" id="buttonsContainer">
+            <button id="yesBtn">ยอมมม</button>
+            <button id="noBtn">ไม่ยอม</button>
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="success" id="success">
+            <!-- <div class="emoji">🎉</div> -->
+            <h1>ขอบคุณนะคะหมาเด็กของพี่ น่ารักที่สุดเลออ</h1>
+            <div class="hearts">❤️ 💕 💖 💗 💓</div>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const message = document.getElementById('message');
+        const question = document.getElementById('question');
+        const success = document.getElementById('success');
+        const buttonsContainer = document.getElementById('buttonsContainer');
+
+        const messages = [
+            "กดอีกทีนะ ไม่ยอมหรอก 🥺",
+            "ได้โปรด... ยอมเถอะนะ 😢",
+            "ขอร้องล่ะ... ยอมสักทีเถอะ 🙏",
+            "เศร้ามากเลย... 😭",
+            "คิดใหม่ได้นะะะ 💕",
+            "ยอม สักทีเถอะนะะะ... ❤️",
+            "ไม่ยอมจริงๆ เหรอ 😢",
+            "คิดดีๆ นะ... อย่าปฏิเสธเลย 💔",
+            "ยอมเถอะน้า... 🥺💕",
+            "แค่กดปุ่มเดียวเองงง... 💗",
+        ];
+
+        let clickCount = 0;
+
+        // ฟังก์ชันสำหรับเคลื่อนที่ปุ่ม No แบบสุ่ม
+        function moveNoButton() {
+            const containerRect = buttonsContainer.getBoundingClientRect();
+            const btnRect = noBtn.getBoundingClientRect();
+            
+            // กำหนดพื้นที่ที่ปุ่ม No สามารถเคลื่อนที่ได้
+            const maxX = containerRect.width - btnRect.width;
+            const maxY = containerRect.height - btnRect.height;
+            
+            // สร้างตำแหน่งสุ่ม แต่หลีกเลี่ยงบริเวณปุ่ม Yes (ตรงกลางบน)
+            let randomX, randomY;
+            
+            do {
+                randomX = Math.random() * maxX;
+                randomY = Math.random() * maxY;
+                
+                // ตรวจสอบว่าห่างจากปุ่ม Yes พอหรือไม่ (ไม่ให้มาทับกัน)
+                // ปุ่ม Yes อยู่ตรงกลาง ช่วงบน
+            } while (randomY < 80 && randomX > maxX * 0.2 && randomX < maxX * 0.8);
+            
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+            
+            message.textContent = messages[Math.min(clickCount, messages.length - 1)];
+            clickCount++;
+        }
+
+        // เมื่อแตะปุ่ม No
+        noBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            moveNoButton();
+        });
+
+        // เมื่อคลิกปุ่ม No (สำหรับเดสก์ท็อป)
+        noBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            moveNoButton();
+        });
+
+        // ป้องกันการเลือกข้อความ
+        noBtn.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        });
+
+        // เมื่อกดปุ่ม Yes
+        yesBtn.addEventListener('click', function() {
+            document.querySelector('.emoji').style.display = 'none';
+            question.style.display = 'none';
+            buttonsContainer.style.display = 'none';
+            message.style.display = 'none';
+            success.classList.add('show');
+        });
+
+        // ป้องกันการ zoom บนมือถือ
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
