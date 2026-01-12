@@ -1,4 +1,4 @@
-package chapter2;
+package chapter02;
 
 public class Example10 {
     final double PI = 3.1416;

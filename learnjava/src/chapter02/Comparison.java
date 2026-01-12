@@ -1,4 +1,4 @@
-package chapter2;
+package chapter02;
 public class Comparison {
     public static void main(String[] args) {
         int x = 3, y = 6;

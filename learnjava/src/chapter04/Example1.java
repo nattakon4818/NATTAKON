@@ -1,4 +1,4 @@
-package chapter4;
+package chapter04;
 
 public class Example1 {
     public void displayInstance() {
