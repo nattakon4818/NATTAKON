@@ -45,5 +45,7 @@ public class SwitchCase {
         //     case 12: System.out.println("December"); break;
         //     default: System.out.println("Invalid month number"); break;
         // }
+
+        scanner.close();
     }
 }

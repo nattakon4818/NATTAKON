@@ -27,6 +27,7 @@ public class Assing05 {
             category = "Severe Obesity";
         }
         System.out.println(category);
+        scanner.close();
 
         /* 
          * BMI Categories:

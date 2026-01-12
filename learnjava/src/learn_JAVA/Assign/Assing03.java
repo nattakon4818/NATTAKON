@@ -29,6 +29,7 @@ public class Assing03 {
         
         // การใช้เงื่อนไขแบบลดรูป (Ternary Operator)
         result = (num % 2 == 0) ? num + " - Even" : num + " - Odd";
-        System.out.println(result);        
+        System.out.println(result);
+        scanner.close();
     }
 }

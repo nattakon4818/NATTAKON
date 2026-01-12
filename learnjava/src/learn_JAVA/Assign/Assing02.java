@@ -17,5 +17,6 @@ public class Assing02 {
         } else {
             System.out.println("Both numbers are equal.");
         }
+        scanner.close();
     }
 }

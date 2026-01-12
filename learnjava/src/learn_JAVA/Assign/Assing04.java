@@ -14,5 +14,6 @@ public class Assing04 {
         int adYear = scanner.nextInt();
         int result2 = adYear + 543;
         System.out.println("The year in B.E. is : " + result2);
+        scanner.close();
     }
 }

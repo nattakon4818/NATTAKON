@@ -13,5 +13,6 @@ public class Assing01 {
         System.out.println("Weight: " + weight + " kg");
         System.out.println("Height: " + height * 100 + " cm");
         System.out.printf("BMI is %.2f", bmi);
+        scanner.close();
     }
 }

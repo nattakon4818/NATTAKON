@@ -16,6 +16,7 @@ public class IfStatement {
         else System.out.println("child");
 
         System.out.println("Exit Program...");
+        input.close();
 
         // // AND
         // if (age >= 15 && age <= 19) System.out.println("teenager"); 

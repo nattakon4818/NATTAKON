@@ -33,6 +33,7 @@ public class Assing06 {
             System.out.println("10 THB : " + (money / 10) + " coins");
             money %= 10;
         }
+        scanner.close();
     }
 }
 
